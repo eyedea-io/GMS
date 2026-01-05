@@ -1,258 +1,431 @@
-# EPF v1.13.0 - Strategy Foundations Template
+# EPF v1.13.0 - Strategy Foundations for GMS
 # STRATEGY Phase: Foundational Strategic Artifacts
-# This is a living document containing four core strategic definitions that inform the winning formula.
-# These artifacts must be consistent with:
-# - Organizational North Star (00_north_star.yaml)
-# - INSIGHT analyses (01_insight_analyses.yaml)
-# - Opportunity statement (03_insight_opportunity.yaml)
-#
-# CHANGE PROTOCOL: If any of these foundations change, you MUST update 04_strategy_formula.yaml to maintain consistency
-#
-# Related Resources:
-# - Schema: ../../schemas/strategy_foundations_schema.json
-# - Guide: ../../docs/guides/STRATEGY_FOUNDATIONS_GUIDE.md
+# Last Updated: 2026-01-05
 
 strategy_foundations:
-  opportunity_id: "opp-001" # Reference to the opportunity this strategy addresses
-  last_updated: "YYYY-MM-DD"
-  confidence_level: "low" # low, medium, high - increases as evidence accumulates
+  opportunity_id: "opp-001"
+  last_updated: "2026-01-05"
+  confidence_level: "medium"
   
   # ============================================================================
   # 1. PRODUCT VISION
   # ============================================================================
-  # The aspirational future state - what the world looks like when we succeed
   
   product_vision:
     vision_statement: |
-      A compelling 2-3 sentence picture of the future state we're creating.
-      Should inspire the team and be memorable.
-      Should be ambitious but believable given 3-5 years.
+      Marketing execution as reliable and measurable as engineering delivery. Growth-oriented
+      SMEs can confidently invest in marketing knowing that work will ship predictably,
+      learnings will compound through structured operating memory, and execution quality
+      improves over time—not degrades into scope fights and forgotten context.
     
     target_timeframe: "3-5 years"
     
     success_indicators:
-      - "Observable indicator 1: What we'll see in the world when vision is realized"
-      - "Observable indicator 2: How users' lives will be different"
-      - "Observable indicator 3: How the market will have shifted"
+      - indicator: "50% of structured deliverables have machine-readable records"
+        target: "By 2026 (MVP), increasing to 80% by 2028"
+      - indicator: "Operating memory visibly compounds across engagements"
+        target: "SOPs evolve based on labeled corrections, execution efficiency improves 20% year-over-year"
+      - indicator: "Multi-tenant GMS serves multiple clients and partner agencies"
+        target: "3-5 concurrent clients by 2027, partner channel operational by 2028"
+      - indicator: "Subscription + premium layers standard pricing model"
+        target: "80% of revenue from recurring subscription base by 2028"
     
     vision_alignment:
       informed_by_trends:
-        - trend: "Reference to specific trend from 00_insight_analyses.yaml"
-          how_it_informs: "Why this trend makes our vision timely and achievable"
+        - trend: "AI has commoditized drafting but not execution certainty"
+          how_it_informs: "Validates focus on orchestration and structured delivery, not content creation speed"
+        - trend: "Marketing services market fragmenting into micro-specialists"
+          how_it_informs: "Creates demand for clear SKU-based packaging and scope boundaries"
+        - trend: "Buyers expect outcome-based pricing, not time-and-materials"
+          how_it_informs: "Subscription + premium model aligns with market expectations"
       
       addresses_opportunity:
-        opportunity_aspect: "Which part of the opportunity this vision fulfills"
-        user_benefit: "How users benefit from this vision"
+        opportunity_aspect: "Implementation gap: SMEs can draft but can't ship reliably"
+        user_benefit: "Predictable execution with structured systems that compound learning over time"
       
-      differentiator: "What makes our vision unique vs. competitors"
+      differentiator: "Engineering-grade systematization applied to marketing workflows—HITL provides accountability while automation enables scale"
   
   # ============================================================================
   # 2. VALUE PROPOSITION
   # ============================================================================
-  # The clear articulation of value we deliver - functional, emotional, and economic
   
   value_proposition:
-    headline: "One-sentence statement of unique value"
+    headline: "Marketing execution as reliable as engineering delivery—subscription-based structured systems with execution throughput and control"
     
-    target_segment: "Primary user persona from 00_insight_analyses.yaml (User/Problem Analysis)"
+    target_segment: "Marketing Directors and CMOs at growth-oriented B2B SMEs (€5-50M revenue), especially SaaS and technology companies"
     
     functional_value:
       jobs_to_be_done:
-        - job: "Primary functional job from User/Problem Analysis"
-          how_we_do_it: "Our specific approach to accomplishing this job"
-          better_than: "How we do it better than current solutions"
+        - job: "Turn marketing drafts into shipped outcomes reliably"
+          how_we_do_it: "Structured execution systems (specs, SOPs, atomization) with clear acceptance criteria"
+          better_than: "Agencies provide ambiguous scope; freelancers require heavy coordination; we provide predictable delivery"
+        
+        - job: "Scale marketing execution without full-time hires"
+          how_we_do_it: "Subscription + premium layers with clear SKU boundaries and multi-tenant infrastructure"
+          better_than: "Hiring requires €60-100K+ per role; we provide capacity at €3-8K/month subscription"
+        
+        - job: "Preserve marketing context and learnings across transitions"
+          how_we_do_it: "Operating memory in structured database—negotiation context, decisions, and SOPs survive team changes"
+          better_than: "Agency/freelancer changes = restart from zero; we accumulate and compound knowledge"
       
       key_benefits:
-        - "Specific functional benefit 1"
-        - "Specific functional benefit 2"
-        - "Specific functional benefit 3"
+        - "Execution certainty: Clear scope boundaries, predictable outcomes, sustained cadence"
+        - "Capacity augmentation: Scale marketing output without hiring overhead"
+        - "Compounding systems: Operating memory improves execution efficiency 20% year-over-year"
     
     emotional_value:
       feelings_we_create:
-        - feeling: "Primary emotion (e.g., confident, in control, relieved)"
-          situation: "When/why users feel this"
+        - feeling: "Confidence and control"
+          situation: "CMO can commit to board on marketing deliverables knowing they'll ship on time"
+        
+        - feeling: "Relief from coordination burden"
+          situation: "Marketing Director no longer spends 10-20 hours/week managing vendors and stakeholders"
       
       pains_we_eliminate:
-        - pain: "Specific pain from User/Problem Analysis"
-          how_eliminated: "How we remove this pain"
+        - pain: "Scope ambiguity causing endless revisions and 30-50% budget waste"
+          how_eliminated: "SKU-based packaging with explicit acceptance criteria and structured state management"
+        
+        - pain: "Context loss when vendors change or team members leave"
+          how_eliminated: "Operating memory preserves negotiation history, decisions, and learnings in structured records"
     
     economic_value:
-      cost_savings: "Quantified savings (time/money) vs. current solution"
-      revenue_gains: "How we help users/customers make more money"
-      risk_reduction: "Financial risks we help users avoid"
+      cost_savings: "Save 10-20 hours/week on coordination (€15-30K annual value); reduce budget waste by 30-50% through scope clarity"
+      revenue_gains: "Enables sustained marketing cadence that compounds—consistent execution drives pipeline growth"
+      risk_reduction: "Predictable scope and costs eliminate budget overrun risk; operating memory eliminates restart penalty"
     
     proof_points:
-      - "Evidence or example that validates this value proposition"
-      - "Customer quote, metric, or case study"
+      - claim: "Execution certainty drives client retention"
+        proof: "Win/loss analysis: 100% of conversions cited scope clarity and reliable delivery vs agency/freelancer chaos"
+      
+      - claim: "Structured systems compound efficiency"
+        proof: "Each client engagement improves baseline SOPs—second engagements 20% more efficient than first"
     
     consistency_check:
-      solves_problem: "Which problem from User/Problem Analysis this solves"
-      exploits_white_space: "Which market white space this fills"
-      leverages_strength: "Which internal strength (SWOT) this leverages"
+      solves_problem: "Implementation gap (User/Problem Analysis): SMEs can draft but can't ship—we provide structured execution"
+      exploits_white_space: "Managed execution tier with subscription + premium layers (Market Analysis: no incumbent in this space)"
+      leverages_strength: "GMS 6-table architecture and operating memory (SWOT Strength: structured execution systems)"
   
   # ============================================================================
   # 3. STRATEGIC SEQUENCING
   # ============================================================================
-  # The deliberate order of value delivery and market expansion
   
   strategic_sequencing:
     sequencing_principle: |
-      The overarching logic for our sequencing (e.g., "Land and expand", 
-      "Vertical then horizontal", "Solve hair-on-fire problem first then expand")
+      Layer-based value delivery: Start with standardisation (Layer 1) to establish repeatability,
+      then add capability/offers (Layer 2) to prove market fit, then learning systems (Layer 3)
+      to create moat, then responsibility infrastructure (Layer 4) for multi-tenant scale, and
+      finally prediction/analytics (Layer 5, optional) for strategic intelligence. This sequence
+      prioritizes proving execution certainty early, then building compounding advantages.
     
     phases:
       - phase: 1
-        name: "Phase name (e.g., Beachhead)"
-        timeframe: "Quarters or year"
-        focus: "What we're building/proving"
+        name: "Standardisation (Layer 1)"
+        timeframe: "H1 2026"
+        focus: "Establish structured execution foundation—prove we can deliver predictably"
         
-        target_segment: "Specific segment from Market Analysis"
-        target_problem: "Specific problem from User/Problem Analysis"
+        target_segment: "Growth-oriented B2B SaaS (2-3 pilot clients)"
+        target_problem: "Implementation gap: can draft but can't ship reliably"
         
         value_delivered:
-          - "Core value element 1"
-          - "Core value element 2"
+          - "Clear SKU-based offers with explicit scope and acceptance criteria"
+          - "Structured database capturing Offers, Deliverables, Commitments, StateChanges"
+          - "Basic SOPs for initial offer set (6 offers)"
         
         success_criteria:
-          - "What proves this phase succeeded"
-          - "Key metric or milestone"
+          - "MVP June 2026: 50% of deliverables have structured records"
+          - "3 active subscription clients with >80% retention"
+          - "Operating memory demonstrably improves second client engagements"
         
         strategic_rationale: |
-          Why this phase comes first. Links to:
-          - Riskiest assumptions we need to test
-          - Market dynamics that make this the right entry point
-          - Competitive positioning advantage
+          De-risk core assumption: buyers will pay subscription prices for structured execution.
+          Establish repeatability before scaling. Build proof points for Layer 2 offer packaging.
+          Foundation must work before adding capability layers.
       
       - phase: 2
-        name: "Phase 2 name (e.g., Expand)"
-        timeframe: "Quarters or year"
-        focus: "What we're building/proving"
+        name: "Capability & Offers (Layer 2)"
+        timeframe: "H2 2026"
+        focus: "Package and validate initial offer set—prove market fit and pricing"
         
-        enabled_by_phase_1: "What phase 1 gives us that makes phase 2 possible"
+        enabled_by_phase_1: "Structured execution foundation provides credibility and proof points for offer packaging"
         
-        target_segment: "Next segment"
+        target_segment: "Expand to professional services firms (legal, consulting)"
         new_value_delivered:
-          - "Additional value beyond phase 1"
+          - "6 packaged offers: Website Renewal, Lead Gen Engine, Positioning Upgrade, Content Cadence, Sales Enablement, Employer Brand"
+          - "Validated pricing: subscription (€3-8K/month) + premium manual layers"
+          - "Partner channel validation with 1-2 agency partnerships"
         
         success_criteria:
-          - "What proves phase 2 succeeded"
+          - "5-7 active clients across B2B SaaS and professional services"
+          - "Pricing validated: >60% gross margin, <12 month payback"
+          - "Partner onboarding Q3 2026: 1 partner delivering through GMS"
         
-        strategic_rationale: "Why this is the logical next step"
+        strategic_rationale: "Prove offers resonate with market before investing in learning infrastructure. Multi-segment validation reduces risk of narrow applicability."
       
       - phase: 3
-        name: "Phase 3 name (optional)"
-        timeframe: "TBD"
-        focus: "TBD"
+        name: "Learning (Layer 3)"
+        timeframe: "2027"
+        focus: "Build operating memory systems that compound—create moat through accumulated knowledge"
+        
+        enabled_by_phase_1: "Structured records from Layer 1 provide training data for learning systems"
+        
+        target_segment: "Scale to 10-15 clients, multi-tenant infrastructure"
+        new_value_delivered:
+          - "SOPs evolve based on labeled corrections and client feedback"
+          - "AI agent orchestration using proprietary SOPs and client data"
+          - "Operating memory provides 20% efficiency gains on repeat engagements"
+        
+        success_criteria:
+          - "Demonstrable efficiency compounding: 20% faster execution on second vs first client"
+          - "AI agents handle 50% of drafting work with HITL approval"
+          - "Client testimonials emphasizing operating memory value"
+        
+        strategic_rationale: "Learning systems create defensible moat—accumulated knowledge compounds and becomes hard to replicate. Timing: need critical mass of data before learning systems provide ROI."
+      
+      - phase: 4
+        name: "Responsibility (Layer 4)"
+        timeframe: "2028"
+        focus: "Multi-tenant scale with clear responsibility boundaries—prove partner channel model"
+        
+        enabled_by_phase_1: "Structured execution and operating memory enable partners to deliver through GMS"
+        
+        target_segment: "Partner agencies and distributed team model"
+        new_value_delivered:
+          - "Multi-tenant infrastructure serving 20+ clients"
+          - "Partner channel operational: 3-5 agencies delivering through GMS"
+          - "Clear responsibility boundaries (who owns what) in structured records"
+        
+        success_criteria:
+          - "20+ concurrent clients with <3 FTE core team (leveraging partners and automation)"
+          - "Partner revenue >30% of total"
+          - "Operating margin >40% through systematization and leverage"
+        
+        strategic_rationale: "Scale requires leverage—partners provide capacity without team size explosion. Layer 4 builds on Layers 1-3: can't partner without standardisation, offers, and learning."
+      
+      - phase: 5
+        name: "Prediction (Layer 5, Optional/Conditional)"
+        timeframe: "2029+"
+        focus: "Strategic intelligence from execution data—conditional on SaaS viability"
+        
+        enabled_by_phase_1: "Accumulated execution data enables predictive analytics and benchmarking"
+        
+        target_segment: "Enterprise clients seeking strategic insights"
+        new_value_delivered:
+          - "Predictive analytics: execution forecasting, resource optimization"
+          - "Benchmarking: client performance vs peer set"
+          - "Strategic intelligence: pattern recognition across engagements"
+        
+        success_criteria:
+          - "Analytics drive 10-20% additional efficiency"
+          - "Premium tier clients willing to pay for strategic intelligence"
+          - "Conditional: only pursue if SaaS-mode viability proven"
+        
+        strategic_rationale: "Layer 5 is optional—pursue only if execution data creates defensible insights that justify SaaS product investment. Otherwise stay in managed execution tier."
     
     sequencing_constraints:
       dependencies:
-        - "What must be true before we can proceed (technical, market, organizational)"
+        - "Layer 1 must prove subscription pricing viable before investing in Layer 2 offer development"
+        - "Layer 3 requires critical mass of structured data (50+ deliverables) before learning ROI positive"
+        - "Layer 4 partner channel requires proven Layer 2 offers and Layer 3 operating memory"
+        - "Layer 5 conditional on accumulated data showing predictive value"
       
       risks_of_sequence:
-        - "What could go wrong with this sequencing approach"
+        - "Risk: Layer 1 MVP too slow to market—mitigation: timebox to 6 months, prioritize ruthlessly"
+        - "Risk: Layer 2 offers don't resonate—mitigation: validate with pilot clients before full build"
+        - "Risk: Layer 3 learning systems don't compound—mitigation: start manual, automate only when patterns clear"
       
-      alternative_considered: "Alternative sequencing we considered and why we rejected it"
+      alternative_considered: "Alternative: Start with Layer 5 SaaS product. Rejected because: (1) no moat without operating memory, (2) buyers don't trust pure software for execution, (3) HITL accountability is differentiator not bug."
     
     consistency_check:
-      aligns_with_trends: "How sequencing exploits trends (timing)"
-      de_risks_assumptions: "How sequencing tests riskiest assumptions early"
-      leverages_moat: "How sequencing builds competitive defensibility"
+      aligns_with_trends: "Sequencing exploits AI commoditization timing—compete on execution certainty while AI handles drafting"
+      de_risks_assumptions: "Layer 1 tests riskiest assumption (subscription pricing) before scaling investment"
+      leverages_moat: "Layer 3 learning creates compounding moat; Layer 4 enables scale without linear cost growth"
   
   # ============================================================================
   # 4. INFORMATION ARCHITECTURE
   # ============================================================================
-  # How users conceptualize, navigate, and interact with our solution
   
   information_architecture:
     architecture_philosophy: |
-      The core organizing principle for how users understand our solution.
-      (e.g., "Task-based navigation", "Role-based views", "Workflow-centric", 
-      "Spatial metaphor", "Timeline-based")
+      GMS 6-table architecture: Organize around execution primitives (Offers, Deliverables,
+      Commitments, StateChanges, Corrections, Blocks) rather than projects or campaigns. This
+      enables atomic tracking, machine-readable state management, and compounding operating memory.
+      Users think in terms of "what needs to ship" and "what's the state," not abstract projects.
     
     mental_model:
       user_thinks_in_terms_of:
-        - "Primary mental model element 1 (e.g., 'Projects')"
-        - "Primary mental model element 2 (e.g., 'Tasks')"
-        - "Primary mental model element 3 (e.g., 'Team members')"
+        - "Offers (SKUs): What we're buying/selling with clear scope"
+        - "Deliverables: What needs to ship with acceptance criteria"
+        - "State: Where are we in the workflow (committed → in progress → review → shipped)"
       
       not_in_terms_of:
-        - "What users DON'T naturally think in (avoid this in our IA)"
+        - "Abstract 'projects' without clear deliverables"
+        - "Hours or effort (we sell outcomes, not time)"
+        - "Creative concepts without execution specs"
       
-      informed_by_jobs: "How this mental model aligns with jobs-to-be-done"
+      informed_by_jobs: "Aligns with job 'turn drafts into shipped outcomes'—users need visibility on what's committed, what's in progress, what's blocked"
     
     primary_structure:
       top_level_navigation:
-        - label: "Nav item 1"
-          purpose: "What users accomplish here"
-          maps_to_job: "Which job-to-be-done this supports"
+        - label: "Offers"
+          purpose: "Browse available SKUs, understand scope and pricing, initiate new work"
+          maps_to_job: "Scale marketing execution—see what's available and how to buy it"
         
-        - label: "Nav item 2"
-          purpose: "What users accomplish here"
-          maps_to_job: "Which job-to-be-done this supports"
+        - label: "Deliverables"
+          purpose: "Track what's committed, in progress, blocked, or shipped"
+          maps_to_job: "Turn drafts into shipped outcomes—see status and take action"
+        
+        - label: "Operating Memory"
+          purpose: "Access SOPs, past decisions, negotiation context, and learnings"
+          maps_to_job: "Preserve context across transitions—leverage accumulated knowledge"
       
       key_object_types:
-        - object: "Primary object type (e.g., 'Project')"
-          definition: "What this represents to users"
+        - object: "Offer (SKU)"
+          definition: "A standardized marketing deliverable with defined scope, quality criteria, and pricing"
           relationships:
-            - "How it relates to other objects"
-          
+            - "Contains one or more Deliverables"
+            - "Has associated SOPs and acceptance criteria"
           key_attributes:
-            - "Essential properties users care about"
+            - "Scope definition (what's included/excluded)"
+            - "Acceptance criteria (done means...)"
+            - "Pricing (subscription or premium)"
+            - "Estimated timeline"
+        
+        - object: "Deliverable"
+          definition: "A specific instance of work committed to a client with state tracking"
+          relationships:
+            - "Belongs to an Offer"
+            - "Has Commitments (who, when)"
+            - "Has StateChanges (workflow progression)"
+            - "May have Corrections (feedback loops)"
+            - "May have Blocks (impediments)"
+          key_attributes:
+            - "Current state (committed | in_progress | review | shipped | blocked)"
+            - "Acceptance criteria met/unmet"
+            - "Due date and actual ship date"
+            - "Responsibility assignment"
+        
+        - object: "Commitment"
+          definition: "A promise to deliver specific work by specific date"
+          relationships:
+            - "Links to Deliverable"
+            - "Assigned to person/team"
+          key_attributes:
+            - "What, who, when"
+            - "State (active | fulfilled | renegotiated)"
+        
+        - object: "StateChange"
+          definition: "A recorded transition in deliverable workflow"
+          relationships:
+            - "Links to Deliverable"
+            - "Triggered by person or automation"
+          key_attributes:
+            - "From state → To state"
+            - "Timestamp and actor"
+            - "Rationale/context"
+        
+        - object: "Correction"
+          definition: "Labeled feedback that updates SOPs and improves future work"
+          relationships:
+            - "Links to Deliverable"
+            - "Informs SOP evolution"
+          key_attributes:
+            - "What was corrected"
+            - "Why it matters"
+            - "How to prevent in future"
+        
+        - object: "Block"
+          definition: "An impediment preventing deliverable from progressing"
+          relationships:
+            - "Links to Deliverable"
+            - "May link to external dependencies"
+          key_attributes:
+            - "What's blocked"
+            - "Why (root cause)"
+            - "Who can unblock"
+            - "Resolution timeline"
     
     interaction_patterns:
       primary_actions:
-        - action: "Key user action (e.g., 'Create project')"
-          frequency: "daily / weekly / monthly"
-          complexity: "simple / medium / complex"
-          must_be: "What UX quality this requires (e.g., 'fast', 'guided', 'flexible')"
+        - action: "Commit to deliverable (buy Offer)"
+          frequency: "weekly"
+          complexity: "simple"
+          must_be: "Fast—SKU selection, basic configuration, immediate commitment"
+        
+        - action: "Check deliverable status"
+          frequency: "daily"
+          complexity: "simple"
+          must_be: "Instant—see state, blockers, next actions at a glance"
+        
+        - action: "Approve/request corrections"
+          frequency: "weekly"
+          complexity: "medium"
+          must_be: "Guided—clear acceptance criteria, structured feedback capture"
+        
+        - action: "Access operating memory (SOPs, past decisions)"
+          frequency: "weekly"
+          complexity: "simple"
+          must_be: "Fast—search and filter, contextual retrieval"
       
       information_discovery:
-        how_users_find_things: "Primary discovery mechanism (search, browse, navigate, filters)"
-        how_users_learn_status: "How users know what's happening (dashboard, notifications, timeline)"
+        how_users_find_things: "Browse Offers catalog; filter Deliverables by state/date; search Operating Memory by keyword or context"
+        how_users_learn_status: "Dashboard showing Deliverables by state; notifications on StateChanges and Blocks; timeline view of workflow"
     
     design_principles:
-      - "Principle 1 for IA decisions (e.g., 'Progressive disclosure')"
-      - "Principle 2 for IA decisions (e.g., 'Minimize clicks to common actions')"
-      - "Principle 3 for IA decisions"
+      - "Atomic tracking: Every deliverable has explicit state and acceptance criteria"
+      - "Machine-readable: All key data structured in database, not locked in documents or email"
+      - "Progressive disclosure: Show high-level status by default, drill into details on demand"
+      - "Blame-free: Corrections labeled as learning opportunities, not failures"
+      - "Compound: Every interaction improves operating memory for future work"
     
     competitive_ia_comparison:
-      competitor_approach: "How competitors structure their IA"
-      our_differentiation: "How our IA is simpler/better/more aligned with user mental model"
+      competitor_approach: "Agencies use project-based tracking (Gantt charts, timelines); freelancers use ad-hoc task lists; SaaS tools use generic 'campaigns' or 'workflows'"
+      our_differentiation: "GMS uses execution primitives (Offers, Deliverables, StateChanges)—more granular than projects, more structured than tasks, machine-readable by design"
     
     consistency_check:
-      reflects_user_problems: "How IA directly addresses user problems from analysis"
-      supports_value_prop: "How IA enables delivery of value proposition"
-      scales_with_sequencing: "How IA can evolve through strategic phases"
+      reflects_user_problems: "Addresses scope ambiguity (Offers with clear boundaries) and context loss (Operating Memory preserves learnings)"
+      supports_value_prop: "IA enables execution certainty (state tracking) and compounding systems (structured feedback loops)"
+      scales_with_sequencing: "Layer 1 introduces core tables; Layer 2 adds Offers; Layer 3 enriches Operating Memory; Layer 4 adds multi-tenant views; Layer 5 adds analytics"
 
 # ============================================================================
 # CROSS-ARTIFACT CONSISTENCY TRACKING
 # ============================================================================
 
 consistency_validation:
-  last_validated: "YYYY-MM-DD"
+  last_validated: "2026-01-05"
   
   validated_against:
-    - artifact: "00_insight_analyses.yaml"
-      status: "consistent" # consistent, needs_update, under_review
-      notes: "Product vision aligns with identified trends"
-    
-    - artifact: "01_insight_opportunity.yaml"
+    - artifact: "00_north_star.yaml"
       status: "consistent"
-      notes: "Value proposition directly addresses opportunity"
+      notes: "Product vision aligns with organizational vision (marketing execution as reliable as engineering)"
+    
+    - artifact: "01_insight_analyses.yaml"
+      status: "consistent"
+      notes: "Value proposition addresses identified trends (AI commoditization, execution gap)"
+    
+    - artifact: "03_insight_opportunity.yaml"
+      status: "consistent"
+      notes: "Strategic sequencing tests riskiest assumptions (subscription pricing, offer packaging)"
   
   known_tensions:
-    - tension: "Description of any strategic tension or trade-off"
-      how_resolved: "How we're managing this tension"
+    - tension: "Standardisation (SKUs) vs. buyer desire for customization"
+      how_resolved: "Subscription (repeatable) + premium (custom) layers provide flexibility within structure"
+    
+    - tension: "HITL accountability vs. automation scale"
+      how_resolved: "Layer-based sequencing: start manual (Layer 1-2), automate confidently (Layer 3+)"
 
 # ============================================================================
 # CHANGE LOG
 # ============================================================================
 
 change_log:
-  - date: "YYYY-MM-DD"
-    changed_by: "Name or Agent"
+  - date: "2026-01-05"
+    changed_by: "GitHub Copilot"
     sections_updated:
       - "product_vision"
-    reason: "Why the change was needed"
+      - "value_proposition"
+      - "strategic_sequencing"
+      - "information_architecture"
+    reason: "Initial population from GMS strategy document and North Star alignment"
     triggered_updates:
-      - "02_strategy_formula.yaml - positioning updated"
+      - "04_strategy_formula.yaml - positioning and business model to follow"
+      - "05_roadmap_recipe.yaml - OKRs aligned with strategic sequencing phases"

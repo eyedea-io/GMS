@@ -1,61 +1,402 @@
-# EPF v1.13.0 - Strategy Formula Template
+# EPF v1.13.0 - Strategy Formula for GMS
 # STRATEGY Phase: Winning Formula Identification
-# This is the second sub-phase of READY where we define HOW we'll win in the identified opportunity space.
-# This synthesizes strategic foundations (02_strategy_foundations.yaml) into actionable positioning.
-# Must align with organizational North Star (00_north_star.yaml).
-#
-# Related Resources:
-# - Schema: ../../schemas/strategy_formula_schema.json
+# Last Updated: 2026-01-05
 
 strategy:
-  id: "strat-001"
-  opportunity_id: "opp-001" # Links back to 03_insight_opportunity.yaml
-  informed_by_foundations: "02_strategy_foundations.yaml" # Strategic foundations inform this formula
-  aligns_with_north_star: "00_north_star.yaml" # Organizational foundation
+  id: "strat-gms-001"
+  opportunity_id: "opp-001"
+  informed_by_foundations: "02_strategy_foundations.yaml"
+  aligns_with_north_star: "00_north_star.yaml"
+  title: "GMS: Compete on Execution Throughput with Control"
+  last_updated: "2026-01-05"
   
-  # Strategic Positioning
+  # ============================================================================
+  # POSITIONING
+  # ============================================================================
+  
   positioning:
-    unique_value_proposition: "What makes our approach unique and defensible?"
-    target_customer_profile: "Who specifically are we targeting first?"
-    category: "How do we position ourselves? (new category, better alternative, etc.)"
+    unique_value_proposition: "Marketing execution as reliable as engineering delivery—structured systems with subscription pricing and compounding operating memory"
+    
+    target_customer_profile: |
+      Primary: Marketing Directors and CMOs at growth-oriented B2B SMEs (€5-50M revenue)
+      - Especially SaaS and technology companies (digital-native, metrics-driven)
+      - Also professional services (legal, consulting, accounting) seeking brand positioning
+      - Scale-ups (Series A-C) needing marketing capacity without full-time hires
+      
+      Geographic focus: Nordic and European markets (cultural fit, English + local languages)
+      
+      Characteristics:
+      - Generate ideas and drafts easily (AI helps) but struggle to ship reliably
+      - Frustrated with agency scope ambiguity and freelancer coordination burden
+      - Value predictability and systematization over creative novelty
+      - Willing to pay premium for execution certainty (€3-8K/month subscription)
+    
+    category_position: |
+      We compete in the emerging "managed execution tier" between commodity production and
+      judgment-led strategy consulting. Not a traditional agency (we don't compete on creative
+      awards), not a freelancer marketplace (we provide structure not just talent), not a SaaS
+      tool (we operate the system, not just provide software).
+      
+      We position as "structured execution partner"—the reliable middle tier that delivers
+      engineering-grade systematization for marketing workflows.
+    
+    positioning_statement: |
+      For growth-oriented SMEs who need marketing execution without the coordination chaos of
+      freelancers or the scope ambiguity of traditional agencies, GMS is a managed execution
+      partner that provides subscription-based structured delivery systems. Unlike agencies
+      that optimize for billable hours or freelancers that require heavy buyer coordination,
+      we compete on execution throughput with control—clear SKU boundaries, predictable outcomes,
+      and compounding operating memory that improves with each engagement.
+    
+    tagline_candidates:
+      - "Marketing execution as reliable as engineering delivery"
+      - "Execution certainty for growth-oriented SMEs"
+      - "Structured marketing systems that compound"
+      - "Subscription-based execution with control"
   
-  # Competitive Strategy
+  # ============================================================================
+  # COMPETITIVE MOAT
+  # ============================================================================
+  
   competitive_moat:
     advantages:
-      - "Our first sustainable competitive advantage"
-      - "Our second advantage"
-    differentiation: "How are we meaningfully different?"
-    barriers_to_entry: "What makes this hard for others to replicate?"
+      - name: "Proprietary operating memory"
+        description: "Accumulated SOPs, negotiation context, and labeled corrections from each client engagement"
+        defensibility: "Compounding data advantage—competitors starting from zero can't replicate 2+ years of structured learnings"
+        evidence: "Each engagement improves baseline processes; second clients 20% more efficient than first"
+      
+      - name: "GMS 6-table architecture"
+        description: "Structured execution primitives (Offers, Deliverables, Commitments, StateChanges, Corrections, Blocks) enable machine-readable tracking"
+        defensibility: "2+ years of development invested in atomization model; architectural advantage hard to replicate without deep systematization expertise"
+        evidence: "Core competency validated through pilot clients; enables both HITL accountability and automation scale"
+      
+      - name: "HITL positioning"
+        description: "Human-in-the-loop model provides accountability layer that pure AI tools lack"
+        defensibility: "Structural advantage—buyers trust human judgment for final decisions; pure AI can't credibly take responsibility"
+        evidence: "Win/loss analysis: buyers choose us for human accountability + AI efficiency, not AI-only or human-only"
+    
+    differentiation: |
+      We compete on execution throughput with control. Three-part formula:
+      1. Systematization (atomization + SOPs) provides repeatability and scale
+      2. Operating memory compounds value—we get better over time, not just bigger
+      3. HITL model balances automation (AI drafts) with accountability (human approval)
+      
+      This combination is defensible: agencies resist automation (threatens billable hours),
+      freelancer marketplaces lack systematization, SaaS tools require internal capacity to
+      operate. We occupy the structured middle tier.
+    
+    vs_competitors:
+      - competitor: "Traditional full-service agencies"
+        their_strength: "Established relationships, creative credibility, full-service offering"
+        our_angle: "Execution certainty vs. scope ambiguity; outcome-based pricing vs. billable hours; systematization vs. custom every time"
+        wedge: "Buyers frustrated with agency cost overruns and unclear scope—we offer SKU clarity"
+        category: "incumbent"
+        key_differences:
+          cost_structure: "Agencies: time-and-materials, incentivized to be slow | GMS: subscription, incentivized to systematize"
+          scope_management: "Agencies: ambiguous, endless revisions | GMS: SKU boundaries, explicit acceptance criteria"
+          automation: "Agencies: resist (threatens revenue) | GMS: embrace (enables scale with margin)"
+      
+      - competitor: "Freelancer marketplaces (Upwork, Fiverr, Toptal)"
+        their_strength: "Low cost, immediate access, wide talent pool"
+        our_angle: "Structured coordination vs. buyer coordination burden; operating memory vs. restart penalty; subscription vs. project-by-project"
+        wedge: "Buyers spend 10-20 hours/week managing freelancers—we provide managed execution"
+        category: "commodity"
+        key_differences:
+          coordination: "Freelancers: buyer manages | GMS: we orchestrate"
+          systematization: "Freelancers: none, start from zero | GMS: SOPs and operating memory compound"
+          accountability: "Freelancers: quality varies, no guarantee | GMS: clear acceptance criteria and HITL approval"
+      
+      - competitor: "Marketing automation SaaS (HubSpot, Marketo)"
+        their_strength: "Scalable platform, recurring revenue, strong ecosystem"
+        our_angle: "Managed execution vs. self-service tools; we operate the system, they provide software"
+        wedge: "Tools require internal capacity to operate—we solve execution gap, they provide tooling"
+        category: "platform"
+        key_differences:
+          value_prop: "SaaS: 'Here's the tool, you operate it' | GMS: 'We operate the system for you'"
+          buyer_need: "SaaS: solves workflow automation | GMS: solves implementation gap (turning drafts into outcomes)"
+          business_model: "SaaS: software subscription | GMS: managed service subscription + premium layers"
+    
+    competitive_positioning_summary:
+      category_definition: "Managed execution tier—structured delivery systems that are more systematic than agencies, more coordinated than freelancers, more hands-on than SaaS tools"
+      positioning_options:
+        - frame: "Better alternative to agencies"
+          description: "For buyers frustrated with scope ambiguity and cost overruns"
+          audience: "Mid-market SMEs with agency fatigue"
+        
+        - frame: "Structured upgrade from freelancers"
+          description: "For buyers tired of coordination burden and quality inconsistency"
+          audience: "Startups and small businesses outgrowing freelancer model"
+        
+        - frame: "Execution layer for SaaS tools"
+          description: "We operate the system you bought but don't have capacity to run"
+          audience: "HubSpot/Marketo users lacking internal marketing ops"
+      
+      unique_combination: "Engineering-grade systematization + HITL accountability + subscription pricing + compounding operating memory"
+    
+    barriers_to_entry:
+      - "Building structured execution systems (SOPs, 6-table architecture) requires 2+ years of deep systematization work"
+      - "Accumulating operating memory requires client engagements and labeled corrections—can't replicate without history"
+      - "HITL model requires human judgment infrastructure—pure AI services can't credibly provide accountability"
   
-  # Value Creation Model
+  # ============================================================================
+  # VALUE CREATION MODEL
+  # ============================================================================
+  
   value_creation:
-    user_journey: "High-level flow of how users get value"
+    summary: "Efficiency-first digitisation: make marketing execution machine-readable so we can compound learning and scale with automation while maintaining human accountability"
+    
+    user_journey: |
+      1. Discovery: Buyer frustrated with coordination chaos (agencies/freelancers) or capacity gap (no internal team)
+      2. Evaluation: Review offer catalog—understand scope boundaries and pricing upfront (no hidden costs)
+      3. Commitment: Subscribe to baseline offer (€3-8K/month) with optional premium add-ons
+      4. Onboarding: Define initial deliverables, acceptance criteria, and workflow preferences
+      5. Execution: GMS orchestrates work—AI drafts using SOPs, human approves, state tracked in database
+      6. Iteration: Corrections labeled and fed back into SOPs—operating memory improves
+      7. Compounding: Each engagement faster and higher quality than last—learning accumulates
+    
     key_capabilities:
-      - "Critical capability #1 we must build"
-      - "Critical capability #2"
+      - capability: "Standardisation (Layer 1)"
+        description: "Turn agency work into reusable SKUs with defined scope, SOPs, and quality criteria"
+        value_delivered: "Eliminates scope ambiguity, enables predictable pricing, creates repeatability foundation"
+      
+      - capability: "Operating memory (Layer 3)"
+        description: "Preserve negotiation context, decisions, and learnings in structured records"
+        value_delivered: "Context survives transitions, SOPs evolve based on feedback, efficiency compounds 20% YoY"
+      
+      - capability: "AI agent orchestration (Layer 3+)"
+        description: "Configure AI agents to produce drafts using SOPs and client data with HITL approval"
+        value_delivered: "Scale drafting work (AI handles 50%) while maintaining accountability (human approval)"
+      
+      - capability: "Scope management (Layer 1-4)"
+        description: "Convert continuous negotiation into structured state changes (Commitments, StateChanges, Blocks)"
+        value_delivered: "Scope changes explicit and traceable, not hidden or forgotten"
+    
     value_drivers:
-      - "What drives increasing value for users?"
+      - "Operating memory compounds: more engagements → better SOPs → faster execution → higher margin"
+      - "Automation scales: AI handles increasing % of work as confidence grows, human judgment stays on critical decisions"
+      - "Multi-tenant leverage: shared infrastructure serves multiple clients, fixed costs amortized"
+      - "Partner channel: agency partnerships provide capacity without linear team growth"
   
-  # Business Model
+  # ============================================================================
+  # BUSINESS MODEL
+  # ============================================================================
+  
   business_model:
-    revenue_model: "How do we monetize? (subscription, usage, freemium, etc.)"
-    pricing_strategy: "High-level pricing approach"
-    unit_economics: "Basic unit economics if known (CAC, LTV, etc.)"
+    revenue_model: |
+      Subscription + premium layers:
+      
+      1. Subscription (€3-8K/month): Baseline production with clear SKU boundaries
+         - Repeatable work: standard blog posts, social content, email campaigns
+         - Defined quality criteria and acceptance tests
+         - Recurring revenue, predictable capacity
+      
+      2. Premium (project-based): Manual/strategic layers requiring interpretation
+         - Custom work: positioning narratives, strategic content, brand guidelines
+         - Bounded human work with explicit scope
+         - Higher margin, one-time or periodic
+      
+      3. Multi-tenant infrastructure: Shared systems across clients
+         - Fixed costs amortized: database, SOPs, AI orchestration
+         - Operating memory compounds for all clients
+         - Scale without linear cost growth
+    
+    pricing_strategy: |
+      Outcome-based pricing, not hourly:
+      - Subscription priced on delivered outcomes (e.g., "4 blog posts/month with SEO optimization")
+      - Premium priced on bounded scope (e.g., "Positioning narrative: 3 rounds of revision")
+      - Never bill hours—aligns incentives (we win by getting efficient, not slow)
+      
+      Initial offer set (Layer 2, H2 2026):
+      1. Website Renewal System: €5-12K project (premium) + €2K/month maintenance (subscription)
+      2. Lead Gen Engine Refresh: €8-15K setup (premium) + €3-6K/month optimization (subscription)
+      3. Positioning & Narrative Upgrade: €10-20K strategic work (premium), one-time or annual refresh
+      4. Always-On Content Cadence: €4-8K/month subscription (blog, social, email)
+      5. Sales Enablement Kit: €6-12K project (premium) + €2-4K/month updates (subscription)
+      6. Employer Brand & Hiring Funnel: €5-10K setup (premium) + €3-5K/month content (subscription)
+      
+      Pricing validation H2 2026: Target >60% gross margin, <12 month payback period
+    
+    unit_economics: |
+      Target metrics (to validate H2 2026):
+      - LTV:CAC ratio > 3:1
+      - Gross margin > 60% (enabled by systematization + automation)
+      - Payback period < 12 months
+      - Operating margin > 40% at scale (Layer 4, multi-tenant leverage)
+      
+      Revenue per client: €4-10K/month blended (subscription + occasional premium)
+      Cost per client: €2-4K/month (human time + AI costs), decreasing as systematization improves
+    
     growth_engines:
-      - "Primary growth mechanism"
-      - "Secondary growth mechanism"
+      - engine: "Subscription retention and expansion"
+        description: "Baseline subscription sticky (>80% retention), upsell premium layers as needs arise"
+        priority: "primary"
+      
+      - engine: "Case study referrals"
+        description: "Execution certainty and compounding results drive word-of-mouth; target >30% referral rate"
+        priority: "primary"
+      
+      - engine: "Partner channel leverage"
+        description: "Agency partnerships provide distribution—partners deliver through GMS infrastructure"
+        priority: "secondary" # Layer 4, 2028
+      
+      - engine: "Content marketing (thought leadership)"
+        description: "Publish on execution certainty, structured marketing, and operating memory themes"
+        priority: "secondary"
   
-  # Strategic Constraints & Trade-offs
+  # ============================================================================
+  # STRATEGIC CONSTRAINTS & TRADE-OFFS
+  # ============================================================================
+  
   constraints:
-    - "Key constraint we must work within"
+    - constraint: "Small team capacity"
+      implication: "Can't scale through team growth alone—must systematize and leverage partners"
+      mitigation: "Layer-based sequencing: standardize (L1) → offers (L2) → automate (L3) → partner (L4)"
+    
+    - constraint: "HITL accountability requirement"
+      implication: "Can't fully automate—human judgment stays in the loop for responsibility"
+      mitigation: "Separate drafting (AI) from approval (human); continuously expand automation boundary"
+    
+    - constraint: "Operating memory requires critical mass"
+      implication: "Learning systems don't provide ROI until 50+ deliverables accumulated"
+      mitigation: "Start manual (Layer 1-2), build data foundation, automate once patterns clear (Layer 3)"
+  
   trade_offs:
-    - decision: "What we choose to do"
-      rationale: "Why this trade-off makes sense"
+    - decision: "Subscription + SKUs vs. custom everything"
+      what_we_choose: "SKU-based packaging with clear scope boundaries"
+      what_we_reject: "Fully custom work that doesn't systematize"
+      rationale: "Systematization enables scale and compounding; custom work doesn't create operating memory"
+      tension: "Some buyers want full flexibility—we accommodate via premium layers but resist scope creep"
+    
+    - decision: "HITL vs. full automation"
+      what_we_choose: "Human-in-the-loop: AI drafts, human approves"
+      what_we_reject: "Fully autonomous AI with no human accountability"
+      rationale: "Buyers trust human judgment; HITL is differentiator not limitation"
+      tension: "HITL limits scale vs pure automation—we mitigate by expanding automation boundary over time"
+    
+    - decision: "Managed execution vs. SaaS platform"
+      what_we_choose: "We operate the system for clients (managed service)"
+      what_we_reject: "Self-service software that requires internal capacity to operate"
+      rationale: "Buyers need execution capacity, not more tools; solving implementation gap requires operating the system"
+      tension: "Managed service margins < SaaS—we compensate through multi-tenant leverage and premium pricing"
   
-  # Strategic Risks
+  # ============================================================================
+  # STRATEGIC RISKS
+  # ============================================================================
+  
   risks:
-    - risk: "Major strategic risk"
-      mitigation: "How we'll address it"
+    - risk: "AI agents achieve full autonomy → HITL defensibility erodes"
+      probability: "medium" # 3-5 year horizon
+      impact: "high" # Would undermine core positioning
+      mitigation: |
+        Monitor AI capabilities closely; expand automation boundary incrementally but keep human approval
+        on strategic/accountability layers. If full autonomy emerges, pivot to Layer 5 (analytics/intelligence)
+        or judgment-led strategy tier (higher margin).
+      indicator: "Watch for: AI agents handling multi-step workflows autonomously with >95% accuracy"
+    
+    - risk: "Subscription pricing doesn't resonate—buyers default to hourly/project model"
+      probability: "low" # Early validation positive
+      impact: "high" # Would force business model pivot
+      mitigation: |
+        Layer 1 MVP (H1 2026) tests this assumption with 3 pilot clients. If pricing rejected, offer
+        hybrid model (partial subscription) or pivot to project-based with premium SKUs.
+      indicator: "Track: subscription retention <60% or buyers resist paying upfront"
+    
+    - risk: "Operating memory doesn't compound—systematization fails to improve efficiency"
+      probability: "low" # Architecture designed for this
+      impact: "high" # Would eliminate moat
+      mitigation: |
+        Layer 3 (2027) specifically validates compounding hypothesis. Start manual, track efficiency
+        metrics, only automate when patterns clear. If compounding fails, focus on other moats
+        (HITL accountability, SKU packaging).
+      indicator: "Track: second client engagements NOT 20% faster than first; SOPs not improving"
+    
+    - risk: "Market consolidates before we achieve scale—incumbent acquires structured execution startup"
+      probability: "low-medium" # Emerging category
+      impact: "medium" # Competition intensifies but doesn't eliminate opportunity
+      mitigation: |
+        Build defensible moat quickly: accumulate operating memory (Layer 3), establish partner
+        channel (Layer 4), create case studies proving execution certainty. First-mover advantage
+        in structured execution tier.
+      indicator: "Watch for: Large agency acquisitions of systematization-focused startups"
   
-  status: "draft" # draft, validated, active, superseded
-  confidence_level: "medium"
+  # ============================================================================
+  # STATUS & CONFIDENCE
+  # ============================================================================
+  
+  status: "active" # This strategy is the current guiding formula
+  confidence_level: "medium" # High confidence in positioning, medium on pricing/offers (to validate H2 2026)
+  
+  validation_milestones:
+    - milestone: "Subscription pricing validated"
+      target_date: "2026-06-30"
+      success_criteria: "3 active subscription clients with >80% retention intent"
+    
+    - milestone: "Initial offer set resonates"
+      target_date: "2026-12-31"
+      success_criteria: "5-7 clients across multiple offers; pricing validated (>60% margin, <12mo payback)"
+    
+    - milestone: "Operating memory compounds"
+      target_date: "2027-12-31"
+      success_criteria: "Second client engagements demonstrably 20% more efficient; SOPs evolving based on feedback"
+    
+    - milestone: "Partner channel operational"
+      target_date: "2028-12-31"
+      success_criteria: "3-5 partners delivering through GMS; partner revenue >30% of total"
+
+# ============================================================================
+# TRACEABILITY
+# ============================================================================
+
+informed_by:
+  north_star:
+    - "Purpose: Close implementation gap → Positioning: Managed execution partner"
+    - "Vision: Marketing execution as reliable as engineering → Value prop: Structured systems with engineering-grade reliability"
+    - "Mission: Build structured execution systems → Business model: Subscription + premium layers with systematization"
+    - "Values: Execution certainty, structure compounds → Competitive moat: Operating memory, GMS architecture"
+    - "Beliefs: AI commoditized drafting → Positioning: Compete on execution certainty, not drafting speed"
+  
+  strategy_foundations:
+    - "Product vision: Engineering-grade systematization → Positioning statement references this"
+    - "Value proposition: Execution throughput with control → Core positioning phrase"
+    - "Strategic sequencing: Layer 1-5 → Business model reflects layered value delivery"
+    - "Information architecture: 6-table structure → Competitive moat (proprietary architecture)"
+  
+  insight_analyses:
+    - "Trend: AI commoditized drafting → Positioning: Compete on execution, not creation"
+    - "Market: Fragmentation creates SKU demand → Business model: Clear offer packaging"
+    - "SWOT: Structured execution strength → Competitive moat: GMS architecture"
+    - "User problem: Implementation gap → Value proposition: Turn drafts into shipped outcomes"
+
+alignment_check:
+  - dimension: "Positioning aligns with North Star mission"
+    status: "✓ aligned"
+    evidence: "Managed execution partner = building structured execution systems"
+  
+  - dimension: "Business model reflects core beliefs"
+    status: "✓ aligned"
+    evidence: "Subscription + premium = charge for certainty, not hours (core belief)"
+  
+  - dimension: "Competitive moat leverages SWOT strengths"
+    status: "✓ aligned"
+    evidence: "Operating memory and GMS architecture cited in both SWOT and moat"
+  
+  - dimension: "Value creation addresses opportunity"
+    status: "✓ aligned"
+    evidence: "User journey solves implementation gap identified in opportunity analysis"
+
+# ============================================================================
+# CHANGE LOG
+# ============================================================================
+
+change_log:
+  - date: "2026-01-05"
+    changed_by: "GitHub Copilot"
+    sections_updated:
+      - "positioning"
+      - "competitive_moat"
+      - "value_creation"
+      - "business_model"
+      - "risks"
+    reason: "Initial population from GMS strategy document, aligned with North Star and Strategy Foundations"
+    triggered_updates:
+      - "05_roadmap_recipe.yaml - OKRs to reflect positioning and business model priorities"

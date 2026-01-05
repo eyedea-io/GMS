@@ -1,313 +1,426 @@
-# EPF v1.13.0 - Roadmap Recipe Template
+# EPF v1.13.0 - Roadmap Recipe for GMS  
 # ROADMAP Phase: Recipe for Solution
-# This is the third sub-phase of READY where we create the actionable plan.
-# 
-# EPF v1.9.6 BREAKING CHANGE: Work packages removed from EPF.
-# EPF now defines: Objectives → Key Results → Feature Definitions
-# Spec-driven tools own: Work Packages → Tasks
-#
-# STRUCTURE: The roadmap is organized by TRACKS (Product, Strategy, Org/Ops, Commercial)
-# to align with the four value models in the FIRE phase. Each track has its own OKRs,
-# assumptions, and solution scaffold. Feature definitions (in FIRE phase) translate
-# KR intent into capabilities that spec-driven tools consume.
-#
-# ============================================================================
-# TRL FIELDS (Technology Readiness Levels) - When to add them
-# ============================================================================
-# Add TRL fields to Key Results when tracking innovation maturity progression:
-# 1. Proving technical feasibility of novel approaches (TRL 2-7)
-# 2. Tracking technical maturity progression in product development
-# 3. Documenting learning and experimental validation
-# 4. Distinguishing innovation work (TRL 1-6) from execution (TRL 7-9)
-#
-# TRL fields are OPTIONAL - only add when you need to:
-# - Track learning and uncertainty resolution
-# - Document innovation maturity advancement
-# - Provide evidence of systematic experimentation
-#
-# The Pathfinder wizard can enrich existing roadmaps with TRL fields
-# using Mode B (Roadmap Enrichment). See examples in Product Track below.
-# ============================================================================
-#
-# Related Resources:
-# - Schema: ../../schemas/roadmap_recipe_schema.json
-# - Guide: ../../docs/guides/TRACK_BASED_ARCHITECTURE.md
+# Last Updated: 2026-01-05
 
 roadmap:
-  id: "roadmap-001"
-  template_version: "1.9.6"
-  strategy_id: "strat-001" # Links back to the strategy from 04_strategy_formula.yaml
+  id: "roadmap-gms-2026-h1"
+  template_version: "1.13.0"
+  strategy_id: "strat-gms-001"
   cycle: 1
-  timeframe: "Q1 2025" # or "Sprint 1-3", etc.
+  timeframe: "H1 2026 (January - June)"
   
+  # ============================================================================
   # TRACK-SPECIFIC ROADMAPS
-  # Each track aligns with a value model: product.value_model.yaml, strategy.value_model.yaml, etc.
+  # ============================================================================
   
   tracks:
     
-    # ============================================================================
-    # PRODUCT TRACK - Core product development
-    # Aligns with: phases/FIRE/value_models/product.value_model.yaml
-    # ============================================================================
+    # ==========================================================================
+    # PRODUCT TRACK - Core GMS capabilities
+    # ==========================================================================
     product:
-      track_objective: "Deliver core product capabilities that solve user problems"
+      track_objective: "Deliver Layer 1 (Standardisation) foundation—prove structured execution works and establish adoption baseline"
       
       okrs:
         - id: "okr-p-001"
-          objective: "Example Product Objective for the first cycle."
+          objective: "Establish GMS 6-table architecture foundation with structured execution records"
           key_results:
             - id: "kr-p-001"
-              description: "Example Product Key Result 1"
-              target: "TBD"
-              measurement_method: "How will we measure this?"
-              baseline: "Current state if known"
-              # Feature definitions that implement this KR are created in:
-              # _instances/{product}/feature_definitions/
-              
-              # === TRL Fields (Optional - add if applying for R&D funding) ===
-              # TRL progression shows technical maturity journey
-              trl_start: 4  # TRL 4 = Lab prototype exists, needs integration
-              trl_target: 6  # TRL 6 = Prototype validated in relevant environment
-              
-              # Technical hypothesis being tested (what are you trying to prove?)
-              technical_hypothesis: "A [specific technology/approach] can achieve [quantifiable outcome] under [defined conditions]"
-              
-              # How will you validate the hypothesis? (experiments, prototypes, tests)
-              experiment_design: "Build prototype → Test under realistic load → Measure performance metrics"
-              
-              # Quantitative success criteria (must be measurable)
-              success_criteria: "Response time <200ms at 10K concurrent users with 99.9% uptime"
-              
-              # What technical unknowns are you resolving?
-              uncertainty_addressed: "Whether [technology] scales to [target capacity] while maintaining [performance characteristic]"
+              description: "MVP June 2026: 50% of deliverables have structured records (Offers, Deliverables, Commitments, StateChanges)"
+              target: "50% structured record coverage"
+              measurement_method: "Database query: COUNT(deliverables WITH structured_record) / COUNT(total_deliverables)"
+              baseline: "0% (pre-GMS state)"
             
             - id: "kr-p-002"
-              description: "Example Product Key Result 2"
-              target: "TBD"
-              measurement_method: "How will we measure this?"
-              baseline: "Current state if known"
-              
-              # === TRL Fields Example 2 (Lower TRL range - early stage R&D) ===
-              trl_start: 2  # TRL 2 = Technology concept formulated
-              trl_target: 4  # TRL 4 = Lab prototype validated
-              technical_hypothesis: "Algorithm X can reduce computation time by 50% compared to baseline approach Y"
-              experiment_design: "Implement both algorithms → Benchmark on standard datasets → Measure accuracy and speed"
-              success_criteria: "50% speed improvement with <5% accuracy loss on benchmark suite"
-              uncertainty_addressed: "Whether theoretical algorithm performance translates to practical implementation gains"
+              description: "GMS database operational with all 6 tables (Offers, Deliverables, Commitments, StateChanges, Corrections, Blocks)"
+              target: "100% table schema complete and tested"
+              measurement_method: "Schema validation + pilot data load test with 20+ sample records per table"
+              baseline: "Conceptual design only"
+            
+            - id: "kr-p-003"
+              description: "State management workflow functional: track deliverables through committed → in_progress → review → shipped"
+              target: "State transitions logged for 100% of pilot deliverables"
+              measurement_method: "StateChanges table populated; workflow audit shows no manual gaps"
+              baseline: "Ad-hoc tracking in spreadsheets/Notion"
+      
+        - id: "okr-p-002"
+          objective: "Build foundational capabilities for execution orchestration"
+          key_results:
+            - id: "kr-p-004"
+              description: "AI drafting infrastructure operational: AI generates 30% of content drafts with human approval"
+              target: "30% of drafts AI-generated, 100% human-approved"
+              measurement_method: "Corrections table tracks AI vs human origin; approval workflow audit"
+              baseline: "0% AI drafting"
+            
+            - id: "kr-p-005"
+              description: "Basic SOPs created for initial offer set (6 offers with defined acceptance criteria)"
+              target: "6 SOP documents, each with explicit scope and quality criteria"
+              measurement_method: "SOP review checklist: scope definition, acceptance criteria, workflow steps all present"
+              baseline: "No formal SOPs"
       
       riskiest_assumptions:
         - id: "asm-p-001"
-          description: "Example product assumption to be tested."
-          type: "desirability" # desirability, feasibility, viability, adaptability
-          criticality: "high" # high, medium, low
-          confidence: "low" # low, medium, high
-          evidence_required: "What would prove/disprove this?"
-          linked_to_kr: ["kr-p-001"]
+          description: "SMEs will adopt structured execution approach (explicit Offers, Commitments, StateChanges) vs. ad-hoc project management"
+          test_approach: "Pilot with 3 clients using GMS workflow; track adoption friction and workarounds"
+          success_criteria: "All 3 pilots complete 10+ deliverables with structured records; <5 workflow deviation incidents"
+        
         - id: "asm-p-002"
-          description: "Example product feasibility assumption."
-          type: "feasibility"
-          criticality: "medium"
-          confidence: "medium"
-          evidence_required: "What would prove/disprove this?"
-          linked_to_kr: ["kr-p-002"]
+          description: "50% structured record coverage is achievable by June 2026 with current team capacity"
+          test_approach: "Track structured record creation velocity weekly; identify bottlenecks"
+          success_criteria: "Linear or accelerating velocity through H1 2026; reach 50% by end-June"
       
       solution_scaffold:
-        description: "High-level product architecture"
-        key_components:
-          - id: "comp-p-001"
-            name: "Product Component Name"
-            purpose: "What this component does"
-            priority: "must-have" # must-have, should-have, could-have
-            maps_to_value_model: "PRODUCT-L2-example" # Reference to product.value_model.yaml
-        architecture_principles:
-          - "Key product architectural principle"
-        technical_constraints:
-          - "Technical constraint or dependency"
+        components:
+          - component: "GMS Database (PostgreSQL)"
+            purpose: "6-table architecture capturing Offers, Deliverables, Commitments, StateChanges, Corrections, Blocks"
+            dependencies: []
+          
+          - component: "State Management UI"
+            purpose: "Dashboard for tracking deliverable status and workflow progression"
+            dependencies: ["GMS Database"]
+          
+          - component: "AI Drafting Integration"
+            purpose: "Connect AI (Claude/ChatGPT) to GMS for content generation with HITL approval"
+            dependencies: ["GMS Database", "State Management UI"]
+          
+          - component: "SOP Repository"
+            purpose: "Structured storage for offer definitions, acceptance criteria, and workflow steps"
+            dependencies: []
     
-    # ============================================================================
-    # STRATEGY TRACK - Strategic positioning and market approach
-    # Aligns with: phases/FIRE/value_models/strategy.value_model.yaml
-    # ============================================================================
+    # ==========================================================================
+    # STRATEGY TRACK - Market positioning and offer packaging
+    # ==========================================================================
     strategy:
-      track_objective: "Establish market position and validate strategic assumptions"
+      track_objective: "Package and validate initial offer set—prove market fit and pricing strategy"
       
       okrs:
         - id: "okr-s-001"
-          objective: "Example Strategy Objective"
+          objective: "Define and validate initial offer set with clear SKU boundaries"
           key_results:
             - id: "kr-s-001"
-              description: "Example Strategy Key Result"
-              target: "TBD"
-              measurement_method: "How will we measure this?"
-              baseline: "Current state"
-              
-              # === TRL Fields for STRATEGY innovation ===
-              # Strategy track TRL: Market positioning & approach maturity
-              trl_start: 3  # TRL 3 = Market hypothesis formulated, initial validation
-              trl_target: 5  # TRL 5 = Market approach validated in realistic conditions
-              
-              # Strategic hypothesis being tested
-              technical_hypothesis: "A [specific positioning/approach] can capture [market segment] by delivering [unique value proposition]"
-              
-              # How will you validate the market hypothesis?
-              experiment_design: "Define target segment → Test messaging with 100 prospects → Measure conversion and feedback"
-              
-              # Quantitative success criteria for market validation
-              success_criteria: "20% conversion rate in target segment with NPS >40 and clear differentiation from competitors"
-              
-              # What strategic unknowns are you resolving?
-              uncertainty_addressed: "Whether our positioning resonates with target customers and creates defensible competitive advantage"
+              description: "6 packaged offers defined with explicit scope, pricing, and acceptance criteria"
+              target: "6 offer SKUs documented: Website Renewal, Lead Gen Engine, Positioning Upgrade, Content Cadence, Sales Enablement, Employer Brand"
+              measurement_method: "Offer catalog published; each SKU has scope doc + pricing + acceptance criteria"
+              baseline: "0 packaged offers"
+            
+            - id: "kr-s-002"
+              description: "Pricing strategy validated: subscription €3-8K/month + premium project-based pricing"
+              target: ">60% gross margin, <12 month payback period across pilot clients"
+              measurement_method: "Financial analysis: revenue per client, cost per client, LTV:CAC ratio"
+              baseline: "Pricing hypothetical"
+            
+            - id: "kr-s-003"
+              description: "Positioning narrative refined: 'Compete on execution throughput with control' resonates with target buyers"
+              target: "5+ buyer interviews validate positioning; 3 pilots cite execution certainty as purchase driver"
+              measurement_method: "Win/loss analysis + client testimonials referencing positioning themes"
+              baseline: "Positioning concept only"
+        
+        - id: "okr-s-002"
+          objective: "Initiate partner channel exploration and validate multi-tenant potential"
+          key_results:
+            - id: "kr-s-004"
+              description: "Partner channel strategy documented: identify 3-5 potential agency partners for Q3 2026 onboarding"
+              target: "3-5 partner candidates identified, initial conversations held"
+              measurement_method: "Partner pipeline tracker; outreach log with 10+ contacts"
+              baseline: "No partner channel"
+            
+            - id: "kr-s-005"
+              description: "Multi-tenant architecture requirements documented for Layer 4 (2028) planning"
+              target: "Technical spec: how GMS serves 20+ clients with <3 FTE core team"
+              measurement_method: "Architecture document reviewed and approved; includes scaling constraints and leverage points"
+              baseline: "Single-tenant mindset"
       
       riskiest_assumptions:
         - id: "asm-s-001"
-          description: "Example strategic assumption"
-          type: "viability"
-          criticality: "high"
-          confidence: "low"
-          evidence_required: "What would prove/disprove this?"
-          linked_to_kr: ["kr-s-001"]
+          description: "Initial offer set (6 SKUs) covers 80% of target buyer needs without excessive customization"
+          test_approach: "Pilot with 3 diverse clients (SaaS, prof services); track custom vs SKU work ratio"
+          success_criteria: ">80% of work falls within SKU boundaries; <20% requires custom/premium work"
+        
+        - id: "asm-s-002"
+          description: "Buyers willing to pay subscription prices (€3-8K/month) vs. hourly/project alternatives"
+          test_approach: "Pricing conversations with 10+ prospects; track objections and conversion rate"
+          success_criteria: "3 subscriptions signed by June 2026; retention intent >80%"
       
       solution_scaffold:
-        description: "Strategic initiatives and positioning approach"
-        key_components:
-          - id: "comp-s-001"
-            name: "Market Positioning Initiative"
-            purpose: "Establish differentiated position"
-            priority: "must-have"
-            maps_to_value_model: "STRATEGY-L2-example"
+        components:
+          - component: "Offer Catalog (public-facing)"
+            purpose: "Marketing asset explaining each SKU with scope, pricing, use cases"
+            dependencies: ["kr-s-001 deliverables"]
+          
+          - component: "Partner Channel Playbook"
+            purpose: "Document how partners deliver through GMS infrastructure"
+            dependencies: ["Multi-tenant architecture spec"]
+          
+          - component: "Pricing Model"
+            purpose: "Subscription tiers + premium add-on pricing logic"
+            dependencies: ["kr-s-002 financial validation"]
     
-    # ============================================================================
-    # ORG/OPS TRACK - Organizational and operational capabilities
-    # Aligns with: phases/FIRE/value_models/org_ops.value_model.yaml
-    # ============================================================================
+    # ==========================================================================
+    # ORG/OPS TRACK - Process standardisation and team capability
+    # ==========================================================================
     org_ops:
-      track_objective: "Build organizational capabilities to execute strategy"
+      track_objective: "Systematize baseline operations and create SOPs that enable repeatability and scale"
       
       okrs:
         - id: "okr-o-001"
-          objective: "Example Org/Ops Objective"
+          objective: "Build operational foundation for structured execution"
           key_results:
             - id: "kr-o-001"
-              description: "Example Org/Ops Key Result"
-              target: "TBD"
-              measurement_method: "How will we measure this?"
-              baseline: "Current state"
-              
-              # === TRL Fields for ORG/OPS innovation ===
-              # Org/Ops track TRL: Process & method maturity
-              trl_start: 2  # TRL 2 = Process concept defined, paper-based approach
-              trl_target: 5  # TRL 5 = Process validated in operational environment
-              
-              # Process hypothesis being tested
-              technical_hypothesis: "An [async-first planning method] can maintain team alignment while reducing meeting overhead by [60%]"
-              
-              # How will you validate the process innovation?
-              experiment_design: "Pilot with 2 teams → Track alignment metrics and meeting time → Compare with baseline synchronous approach"
-              
-              # Quantitative success criteria for process validation
-              success_criteria: "60% reduction in meeting hours while maintaining >80% alignment score and <10% rework rate"
-              
-              # What operational unknowns are you resolving?
-              uncertainty_addressed: "Whether distributed teams can maintain velocity and context without synchronous planning ceremonies"
+              description: "Core SOPs created: offer scoping, deliverable workflow, state management, feedback loops"
+              target: "4 core SOP documents with step-by-step procedures"
+              measurement_method: "SOP repository audit; each SOP has workflow diagrams + checklists"
+              baseline: "Tribal knowledge only"
+            
+            - id: "kr-o-002"
+              description: "Operating memory capture process operational: Corrections table populated with labeled feedback"
+              target: "20+ corrections captured and categorized by June 2026"
+              measurement_method: "Corrections table query; each entry has problem/solution/prevention tags"
+              baseline: "No structured feedback capture"
+            
+            - id: "kr-o-003"
+              description: "Team trained on GMS workflow: all team members can create Offers, track Deliverables, log StateChanges"
+              target: "100% team members certified on GMS workflow"
+              measurement_method: "Training completion + practical assessment (create sample offer, track mock deliverable)"
+              baseline: "GMS workflow not formalized"
+        
+        - id: "okr-o-002"
+          objective: "Establish baseline efficiency metrics for compounding measurement"
+          key_results:
+            - id: "kr-o-004"
+              description: "Time-to-ship metrics captured: track cycle time from commit → shipped for each deliverable type"
+              target: "Baseline cycle time established for 6 offer types"
+              measurement_method: "StateChanges table analysis: AVG(shipped_date - committed_date) by offer_type"
+              baseline: "No cycle time tracking"
+            
+            - id: "kr-o-005"
+              description: "Client satisfaction baseline established: NPS survey at end of pilot engagements"
+              target: "NPS score from 3 pilot clients"
+              measurement_method: "NPS survey: 'How likely to recommend GMS to peer?' (0-10 scale)"
+              baseline: "No formal satisfaction tracking"
       
       riskiest_assumptions:
         - id: "asm-o-001"
-          description: "Example organizational assumption"
-          type: "adaptability"
-          criticality: "medium"
-          confidence: "medium"
-          evidence_required: "What would prove/disprove this?"
-          linked_to_kr: ["kr-o-001"]
+          description: "SOPs can systematize 80% of execution work without feeling overly rigid to clients"
+          test_approach: "Pilot SOPs with 3 clients; track customization requests and workarounds"
+          success_criteria: "<20% of work requires SOP deviation; clients cite predictability as value"
+        
+        - id: "asm-o-002"
+          description: "Current team can deliver 50% structured record coverage by June 2026 without burnout"
+          test_approach: "Weekly capacity check-ins; monitor workload and stress signals"
+          success_criteria: "No team member >80% capacity utilization; no burnout incidents"
       
       solution_scaffold:
-        description: "Organizational structure and operational processes"
-        key_components:
-          - id: "comp-o-001"
-            name: "Operational Process"
-            purpose: "Enable efficient execution"
-            priority: "should-have"
-            maps_to_value_model: "ORG_OPS-L2-example"
+        components:
+          - component: "SOP Repository (Notion/Wiki)"
+            purpose: "Centralized storage for all operational procedures"
+            dependencies: []
+          
+          - component: "Corrections Workflow"
+            purpose: "Process for capturing, categorizing, and acting on feedback"
+            dependencies: ["GMS Database - Corrections table"]
+          
+          - component: "Team Training Program"
+            purpose: "Onboarding and certification for GMS workflow"
+            dependencies: ["SOP Repository", "GMS Database access"]
     
-    # ============================================================================
-    # COMMERCIAL TRACK - Go-to-market and revenue generation
-    # Aligns with: phases/FIRE/value_models/commercial.value_model.yaml
-    # ============================================================================
+    # ==========================================================================
+    # COMMERCIAL TRACK - Revenue model validation and client acquisition
+    # ==========================================================================
     commercial:
-      track_objective: "Validate business model and establish revenue channels"
+      track_objective: "Prove subscription model viability and establish initial customer base"
       
       okrs:
         - id: "okr-c-001"
-          objective: "Example Commercial Objective"
+          objective: "Validate subscription pricing model with paying clients"
           key_results:
             - id: "kr-c-001"
-              description: "Example Commercial Key Result"
-              target: "TBD"
-              measurement_method: "How will we measure this?"
-              baseline: "Current state"
-              
-              # === TRL Fields for COMMERCIAL innovation ===
-              # Commercial track TRL: Business model & revenue approach maturity
-              trl_start: 4  # TRL 4 = Pricing model tested with pilot customers
-              trl_target: 7  # TRL 7 = Business model validated at operational scale
-              
-              # Business model hypothesis being tested
-              technical_hypothesis: "A [usage-based pricing model] can achieve [€50 ARPU] while maintaining [<20% churn] in [SMB segment]"
-              
-              # How will you validate the business model?
-              experiment_design: "Launch with 50 pilot customers → Track usage, revenue, and retention → Compare with alternative pricing models"
-              
-              # Quantitative success criteria for business model validation
-              success_criteria: "€50+ ARPU, <20% monthly churn, >70% customers exceeding base tier within 3 months"
-              
-              # What commercial unknowns are you resolving?
-              uncertainty_addressed: "Whether usage-based pricing creates sustainable unit economics while aligning incentives with customer value realization"
+              description: "3 active subscription clients by June 2026 with >80% retention intent"
+              target: "3 signed subscription contracts (€3-8K/month range)"
+              measurement_method: "Contract tracker; retention intent survey at 3-month mark"
+              baseline: "0 subscription clients"
+            
+            - id: "kr-c-002"
+              description: "Gross margin validated: achieve >60% across pilot clients"
+              target: ">60% gross margin (revenue - direct costs) / revenue"
+              measurement_method: "Financial tracking: client revenue minus (human time + AI costs)"
+              baseline: "Margin hypothetical"
+            
+            - id: "kr-c-003"
+              description: "Payback period validated: <12 months from first payment to breakeven"
+              target: "<12 month payback based on pilot cohort economics"
+              measurement_method: "LTV:CAC analysis assuming 24-month retention"
+              baseline: "Unit economics unproven"
+        
+        - id: "okr-c-002"
+          objective: "Build sales and customer success foundation"
+          key_results:
+            - id: "kr-c-004"
+              description: "Sales playbook created: outreach sequences, discovery questions, demo scripts for 6 offers"
+              target: "Sales playbook document with 3 outreach templates + discovery framework"
+              measurement_method: "Playbook review + pilot test with 10+ prospects"
+              baseline: "Ad-hoc sales approach"
+            
+            - id: "kr-c-005"
+              description: "Case studies initiated: document 2 pilot client stories emphasizing execution certainty"
+              target: "2 case study drafts (client + problem + solution + results)"
+              measurement_method: "Case study review; client approval for public use"
+              baseline: "No case studies"
       
       riskiest_assumptions:
         - id: "asm-c-001"
-          description: "Example commercial assumption"
-          type: "viability"
-          criticality: "high"
-          confidence: "low"
-          evidence_required: "What would prove/disprove this?"
-          linked_to_kr: ["kr-c-001"]
+          description: "Buyers will sign subscription contracts after evaluating offer catalog and pricing"
+          test_approach: "Sales pipeline tracking; conversion rate from discovery call → contract"
+          success_criteria: ">20% conversion rate (10 qualified conversations → 2+ contracts)"
+        
+        - id: "asm-c-002"
+          description: "Gross margin >60% is achievable with current systematization level"
+          test_approach: "Track actual time spent per client vs subscription revenue; identify margin leaks"
+          success_criteria: "Margin improves month-over-month as SOPs mature; reach >60% by June"
       
       solution_scaffold:
-        description: "Go-to-market approach and revenue model"
-        key_components:
-          - id: "comp-c-001"
-            name: "Sales Motion"
-            purpose: "Convert prospects to customers"
-            priority: "must-have"
-            maps_to_value_model: "COMMERCIAL-L2-example"
+        components:
+          - component: "Sales Playbook"
+            purpose: "Structured approach for buyer conversations and contract negotiation"
+            dependencies: ["Offer Catalog", "Pricing Model"]
+          
+          - component: "Case Study Template"
+            purpose: "Framework for documenting client success stories"
+            dependencies: ["Client testimonials", "kr-c-005 pilot data"]
+          
+          - component: "Customer Success Workflow"
+            purpose: "Onboarding, regular check-ins, renewal process"
+            dependencies: ["GMS Database", "SOP Repository"]
   
   # ============================================================================
-  # CROSS-TRACK COORDINATION
+  # CROSS-TRACK DEPENDENCIES
   # ============================================================================
   
   cross_track_dependencies:
-    # Dependencies between KRs across tracks
-    - from_kr: "kr-c-001"
-      to_kr: "kr-p-001"
-      dependency_type: "requires" # requires, informs, enables
-      description: "Commercial validation requires product capability to be delivered"
+    - from_kr: "kr-p-001"
+      to_kr: "kr-o-004"
+      dependency_type: "enables"
+      description: "Structured records (Product) enable cycle time measurement (OrgOps)—can't track efficiency without state data"
     
     - from_kr: "kr-s-001"
-      to_kr: "kr-p-001"
+      to_kr: "kr-c-001"
+      dependency_type: "requires"
+      description: "Offer packaging (Strategy) must complete before subscription sales (Commercial)—buyers need clear SKUs to evaluate"
+    
+    - from_kr: "kr-p-005"
+      to_kr: "kr-o-001"
       dependency_type: "informs"
-      description: "Market positioning informs product feature prioritization"
+      description: "Offer-specific SOPs (Product) inform core operational SOPs (OrgOps)—examples guide systematization"
+    
+    - from_kr: "kr-o-001"
+      to_kr: "kr-c-004"
+      dependency_type: "informs"
+      description: "Operational SOPs (OrgOps) inform sales playbook (Commercial)—helps articulate process value to buyers"
+    
+    - from_kr: "kr-c-001"
+      to_kr: "kr-p-001"
+      dependency_type: "enables"
+      description: "Active clients (Commercial) provide data for structured records (Product)—real engagements populate GMS"
+    
+    - from_kr: "kr-s-002"
+      to_kr: "kr-c-002"
+      dependency_type: "requires"
+      description: "Pricing validation (Strategy) blocks margin validation (Commercial)—must set prices before measuring profitability"
+    
+    - from_kr: "kr-p-002"
+      to_kr: "kr-o-002"
+      dependency_type: "requires"
+      description: "GMS database (Product) must be operational before Corrections capture (OrgOps)—infrastructure prerequisite"
   
-  # Timeline & Milestones
-  timeline:
-    cycle_start: "TBD"
-    cycle_end: "TBD"
+  # ============================================================================
+  # EXECUTION PLAN
+  # ============================================================================
+  
+  execution_plan:
+    sequencing_rationale: |
+      H1 2026 prioritizes Layer 1 (Standardisation) and Layer 2 (Offers) validation. Critical path focuses
+      on proving subscription model viability—this is the riskiest assumption. Sequence:
+      
+      1. January-February: Build GMS database + define offer set (parallel infrastructure + strategy work)
+      2. March: Launch pilot subscriptions—start populating structured records with real client data
+      3. April-May: Refine SOPs based on pilot learnings, track efficiency metrics
+      4. June: MVP milestone—50% structured record coverage, pricing/margin validation, retention assessment
+      
+      Rationale: Can't validate pricing until offers are defined; can't measure efficiency until data flows;
+      can't refine SOPs until pilots reveal friction. This sequence de-risks subscription model assumption
+      (asm-c-001) before scaling investment in H2 2026.
+    
+    critical_path:
+      - "strategy:kr-s-001"  # Offer packaging (blocks sales)
+      - "product:kr-p-002"    # GMS database (blocks everything data-dependent)
+      - "commercial:kr-c-001" # Subscription contracts (proves model viability)
+      - "product:kr-p-001"    # 50% structured records (MVP milestone)
+      - "commercial:kr-c-002" # Gross margin validation (proves unit economics)
+    
+    parallel_tracks:
+      - name: "Infrastructure Development (Jan-Feb)"
+        key_results: ["kr-p-002", "kr-p-005", "kr-o-001"]
+        timeframe: "8 weeks"
+        depends_on: []
+      
+      - name: "Offer Packaging & Sales Preparation (Jan-Mar)"
+        key_results: ["kr-s-001", "kr-s-003", "kr-c-004"]
+        timeframe: "10 weeks"
+        depends_on: []
+      
+      - name: "Pilot Execution (Mar-May)"
+        key_results: ["kr-p-001", "kr-c-001", "kr-o-002", "kr-o-004"]
+        timeframe: "12 weeks"
+        depends_on: ["kr-p-002", "kr-s-001"]
+      
+      - name: "Validation & Refinement (May-Jun)"
+        key_results: ["kr-s-002", "kr-c-002", "kr-c-003", "kr-c-005", "kr-o-005"]
+        timeframe: "8 weeks"
+        depends_on: ["kr-c-001", "kr-p-001"]
+    
     key_milestones:
-      - date: "TBD"
-        milestone: "Example milestone"
-        key_results: ["kr-p-001", "kr-s-001"]
+      - date: "2026-02-28"
+        milestone: "Foundation Complete: GMS database operational + 6 offers defined"
+        krs_required: ["kr-p-002", "kr-s-001"]
+        significance: "Infrastructure ready for pilot launches; sales can begin"
+      
+      - date: "2026-03-31"
+        milestone: "First Pilot Launched: 1 subscription client onboarded and using GMS workflow"
+        krs_required: ["kr-c-001 (partial: 1/3)", "kr-p-002"]
+        significance: "Real data starts flowing; can begin efficiency tracking and SOP refinement"
+      
+      - date: "2026-04-30"
+        milestone: "Pilot Cohort Active: 3 subscription clients using GMS with structured records"
+        krs_required: ["kr-c-001", "kr-p-001 (partial: 30%)"]
+        significance: "Critical mass for pricing/margin validation; can assess retention signals"
+      
+      - date: "2026-06-30"
+        milestone: "MVP Validation: 50% structured records + pricing/margin validated + retention positive"
+        krs_required: ["kr-p-001", "kr-c-002", "kr-c-003", "kr-c-001 (retention survey)"]
+        significance: "Layer 1 proven; green light for H2 2026 scaling (partner channel, additional offers)"
   
-  # Review & Approval
-  status: "draft" # draft, approved, active, completed, cancelled
-  approved_by: null
-  approval_date: null
-  start_date: null
-  target_completion_date: null
+  # ============================================================================
+  # STATUS
+  # ============================================================================
+  
+  status: "approved" # Ready for execution January 2026
+  approved_date: "2026-01-05"
+  start_date: "2026-01-06"
+  end_date: "2026-06-30"
+
+# ============================================================================
+# CHANGE LOG
+# ============================================================================
+
+change_log:
+  - date: "2026-01-05"
+    changed_by: "GitHub Copilot"
+    sections_updated:
+      - "All tracks (Product, Strategy, OrgOps, Commercial)"
+      - "Cross-track dependencies"
+      - "Execution plan"
+    reason: "Initial H1 2026 roadmap creation aligned with Strategy Formula and layer-based sequencing"
+    notes: |
+      H2 2026 roadmap to follow after MVP validation. Will include:
+      - Layer 2 expansion (additional offers, partner channel initiation)
+      - Layer 3 groundwork (AI orchestration, learning infrastructure)
+      - Scaling to 5-7 active clients
