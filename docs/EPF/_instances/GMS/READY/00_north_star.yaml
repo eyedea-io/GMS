@@ -13,9 +13,9 @@
 # - Guide: ../../docs/guides/NORTH_STAR_GUIDE.md
 
 north_star:
-  organization: "Your Organization Name"
-  last_reviewed: "YYYY-MM-DD"
-  next_review: "YYYY-MM-DD" # Recommended annual review
+  organization: "Coupler / GMS (Growth Marketing System)"
+  last_reviewed: "2026-01-05"
+  next_review: "2027-01-05" # Recommended annual review
   version: "1.0"
   
   # ============================================================================
@@ -25,23 +25,31 @@ north_star:
   
   purpose:
     statement: |
-      A clear, inspiring statement of why your organization exists.
-      Not what you do, but WHY you do it.
-      Should be timeless and aspirational.
+      We exist to close the implementation gap in marketing execution.
       
-      Example: "We exist to democratize access to world-class education"
-      Example: "We exist to eliminate preventable suffering in healthcare"
-      Example: "We exist to help teams do their best work without burnout"
+      We believe growth-oriented companies deserve marketing execution that is predictable,
+      structured, and continuously improving—not a pile of messages, files, and interpretation
+      that evaporates when people leave.
     
     problem_we_solve: |
-      The fundamental human or organizational problem we're addressing.
-      This should be enduring - likely still relevant in 10+ years.
+      Marketing services have become fragmented. Buyers face an overwhelming choice set:
+      in-house attempts, freelancers, agencies, specialists, tools, templates, and "DIY with AI."
+      
+      Generative AI has made drafting cheap and fast. What remains expensive is execution certainty:
+      scoping, prioritisation, stakeholder alignment, scope management, QA, publishing, and sustained cadence.
+      
+      The implementation gap: many SMEs can generate plausible drafts, but they struggle to turn them
+      into shipped outcomes because the hard parts aren't "writing"—they are turning intent into specs,
+      coordinating work, managing scope interpretation, and sustaining momentum over time.
     
-    who_we_serve: "The broadest definition of who benefits from our existence"
+    who_we_serve: "Growth-oriented SMEs (mid-market and up) that need marketing to drive growth but lack the internal capacity to build and operate a structured execution system"
     
     impact_we_seek: |
-      The ultimate change we want to create in the world.
-      If we succeed wildly, what's different?
+      Marketing execution that is structured, reusable, and continuously improving.
+      
+      If we succeed: companies can confidently invest in marketing knowing that work will ship,
+      learnings will compound, and execution quality will improve over time—not degrade into
+      scope fights and forgotten context.
   
   # ============================================================================
   # 2. VISION - Where We Imagine Being in the Future
@@ -50,25 +58,27 @@ north_star:
   
   vision:
     vision_statement: |
-      A vivid, inspiring picture of the future (5-10 years).
-      Should be ambitious but believable.
-      Should paint a picture anyone can understand.
+      A world where marketing execution is as reliable and measurable as engineering delivery.
       
-      Example: "A world where every child has access to personalized learning"
-      Example: "Every team works with clarity, alignment, and joy"
-      Example: "Healthcare decisions are always informed by the best evidence"
+      Where work is structured, reusable, and continuously improving. Where agencies compete
+      on execution throughput with control, not on how many drafts they can generate.
+      
+      Where the value of a marketing provider is measured by certainty of shipped outcomes,
+      not hours spent producing.
     
     timeframe: "5-10 years"
     
     success_looks_like:
-      - "Observable indicator 1: What we see in the world"
-      - "Observable indicator 2: How people's lives are different"
-      - "Observable indicator 3: What our market/industry looks like"
-      - "Observable indicator 4: What our organization looks like"
+      - "Marketing work is machine-readable by default—structured into specs, SOPs, dependencies, and states"
+      - "Execution memory compounds: learnings from each delivery improve future work, SOPs evolve based on labeled corrections"
+      - "The market splits into clear tiers: commodity production at scale, managed execution systems, judgment-led partners, and tool/platform plays"
+      - "Coupler operates a multi-tenant system serving multiple clients and partner agencies with shared infrastructure"
+      - "Subscription + premium manual layers is the standard pricing model for structured execution"
     
     not_the_vision:
-      - "Clarification 1: What we're NOT trying to become"
-      - "Clarification 2: Boundaries on our ambition"
+      - "We are NOT trying to become a pure SaaS platform company (that's conditional optionality)"
+      - "We are NOT competing on commodity volume or lowest price per draft"
+      - "We are NOT building fully autonomous AI services—HITL (Human-in-the-Loop) is core to our model"
   
   # ============================================================================
   # 3. MISSION - What We Do to Deliver Value
@@ -77,37 +87,49 @@ north_star:
   
   mission:
     mission_statement: |
-      A clear statement of WHAT we do and FOR WHOM.
-      More concrete than purpose, more stable than individual products.
+      We build and operate structured marketing execution systems for growth-oriented SMEs.
       
-      Example: "We build AI-powered learning platforms that adapt to each student's needs"
-      Example: "We create workflow tools that eliminate coordination overhead for distributed teams"
-      Example: "We provide clinical decision support that synthesizes the latest evidence"
+      We digitise the work of turning marketing intent into shipped outcomes by making execution
+      machine-readable: specs, SOPs, dependencies, states, and learning signals.
     
     what_we_do:
-      - "Core activity 1: Primary thing we do"
-      - "Core activity 2: Another core activity"
-      - "Core activity 3: Supporting activity"
+      - "Structured delivery: Turn repeatable marketing work into explicit specs, SOPs, and structured database records"
+      - "Execution orchestration: Coordinate drafting (AI), refinement (human), and implementation across channels and vendors"
+      - "Subscription + premium layers: Package baseline production (subscription) with bounded manual work (premium add-ons)"
+      - "Multi-tenant operations: Serve multiple clients and partner agencies through shared, structured infrastructure"
     
     how_we_deliver:
       approach: |
-        Our distinctive approach or methodology.
-        What makes our way of delivering the mission unique?
+        Our distinctive approach is atomisation + Human-in-the-Loop (HITL).
+        
+        Work is decomposed into structured "bricks" (specs, SOPs, acceptance criteria, dependencies, states)
+        so it becomes machine-readable. AI produces high-leverage drafts and structure. Humans make
+        the final interpretive call where ambiguity and accountability require it.
+        
+        This enables us to charge premium for human responsibility and judgment (where pure AI services
+        cannot credibly take accountability) while automation handles the bulk of drafting and coordination.
       
       key_capabilities:
-        - "Capability 1: Core competency we build"
-        - "Capability 2: Another essential capability"
+        - "Standardisation: Turn agency work into reusable SKUs (Stock Keeping Units) with defined scope, SOPs, and quality criteria"
+        - "Operating memory: Preserve negotiation context, decisions, and learnings in structured records that compound over time"
+        - "AI agent orchestration: Configure AI agents to produce drafts using our SOPs and data as guidance, with HITL for final decisions"
+        - "Scope management: Convert continuous interpretation (negotiation reality) into structured state changes without forcing premature classification"
     
     who_we_serve_specifically: |
-      More specific than purpose - which segments, roles, or personas?
-      Can evolve as we expand, but should be clear now.
+      Growth-oriented SMEs (mid-market and up), especially:
+      - Technology-driven and innovation-oriented companies
+      - Nordic and European clients in SaaS, IT, renewables, ESG, professional services
+      - Companies with ambitions to scale internationally
+      - Buyers who need marketing to drive growth but lack internal capacity to operationalise it
     
     boundaries:
       we_dont_do:
-        - "Activity 1 we explicitly don't do"
-        - "Activity 2 that's out of scope"
+        - "Compete on commodity volume or price-per-draft races"
+        - "Build fully autonomous AI services (HITL is core to our model)"
+        - "Lead with IT-style SLAs (we start under agency T&Cs and prove operational performance first)"
+        - "Jump to SaaS/platformisation before proving repeatability and distribution"
       
-      why_not: "Rationale for these boundaries (focus, competency, strategy)"
+      why_not: "We focus on execution certainty and compounding advantage through structured data, not on speed-to-market in commodity production or premature platform plays"
   
   # ============================================================================
   # 4. VALUES - How We Behave and Conduct Ourselves
@@ -115,51 +137,117 @@ north_star:
   # Normative rules that guide decisions, behaviors, and culture
   
   values:
-    - value: "Value Name 1"
+    - value: "Execution Certainty Over Creative Novelty"
       definition: |
-        What this value means in practice.
-        Should be specific enough to guide decisions.
+        We prioritize predictable, repeatable delivery over novel creative approaches.
+        Structured execution that ships beats brilliant ideas that stall. We value knowing
+        what will happen, when, and at what quality level—not surprise and improvisation.
       
       behaviors_we_expect:
-        - "Observable behavior 1 that demonstrates this value"
-        - "Observable behavior 2"
+        - "Decompose work into explicit specs, SOPs, and acceptance criteria before starting"
+        - "Document decisions and context so they survive team changes"
+        - "Default to repeatable processes over one-off custom approaches"
+        - "Make scope changes explicit through structured state management"
       
       behaviors_we_reject:
-        - "Anti-pattern 1 that violates this value"
-        - "Anti-pattern 2"
+        - "Starting work without clear scope definition ('let's figure it out as we go')"
+        - "Verbal agreements without written documentation"
+        - "Custom solutions when reusable patterns exist"
+        - "Scope creep disguised as 'flexibility' or 'collaboration'"
       
       example_decision: |
-        A concrete example of how this value influenced a real decision.
-        "When faced with [situation], we chose [action] because [value]."
+        When a client requested a "creative approach" to content without defined scope,
+        we chose to invest 2 extra days defining specs and SOPs upfront rather than
+        start drafting. Result: clearer expectations, fewer revision loops, and reusable
+        process for future clients. Execution certainty won over speed-to-draft.
     
-    - value: "Value Name 2"
+    - value: "Structure Compounds, Chaos Decays"
       definition: |
-        What this value means.
+        We believe structured, machine-readable work creates compounding advantage.
+        Each delivery improves future work through better SOPs, labeled feedback, and
+        accumulated context. Unstructured work (email chains, verbal agreements,
+        undocumented decisions) creates mounting coordination debt.
       
       behaviors_we_expect:
-        - "Expected behavior 1"
-        - "Expected behavior 2"
+        - "Capture learnings in structured records that inform future work"
+        - "Update SOPs based on labeled corrections and feedback"
+        - "Preserve negotiation context in database, not email threads"
+        - "Build reusable components (SKUs) rather than starting from scratch each time"
       
       behaviors_we_reject:
-        - "Anti-pattern 1"
+        - "Treating each project as net-new without leveraging past work"
+        - "Leaving decisions undocumented ('we discussed this in Slack')"
+        - "Repeating the same mistakes because learnings weren't captured"
+        - "Optimizing for short-term speed at the cost of long-term reusability"
       
       example_decision: |
-        Concrete example of this value in action.
+        When faced with a tight deadline for a lead generation campaign, we could have
+        skipped updating our Lead Gen Engine SOP to save 3 hours. Instead, we documented
+        the new approach so the next team could start from a better baseline. Short-term
+        slowdown, long-term acceleration. Structure compounds.
     
-    - value: "Value Name 3"
-      definition: "What this value means."
+    - value: "Human Judgment Where It Matters, Automation Everywhere Else"
+      definition: |
+        We use AI for high-leverage drafting and structure, but reserve final interpretive
+        calls for humans. This isn't about "keeping humans in the loop" for its own sake—
+        it's about placing accountability where it belongs. Humans own ambiguity and context.
+        AI owns repetitive transformation and initial structure.
+      
       behaviors_we_expect:
-        - "Expected behavior"
+        - "Use AI to draft SOPs, specs, and content at scale"
+        - "Require human review for final approval, especially where interpretation or accountability is needed"
+        - "Design processes that separate drafting (AI-friendly) from judgment (human-owned)"
+        - "Continuously expand what we can confidently automate"
+      
       behaviors_we_reject:
-        - "Anti-pattern"
-      example_decision: "Example"
+        - "Fully autonomous AI with no human accountability"
+        - "Manual work on tasks that should be automated"
+        - "Treating AI as 'the oracle' without critical human oversight"
+        - "Defensive anti-automation ('we need humans for this') without evidence"
+      
+      example_decision: |
+        For website renewal content, AI generates initial page drafts using client's brand
+        guidelines and positioning. Human strategist reviews for tone, nuance, and strategic
+        alignment before approval. AI handles 80% of drafting work, human handles 20% of
+        critical judgment. This separation lets us scale while maintaining accountability.
     
-    # Typical values: Customer obsession, Bias for action, Ownership, Transparency, 
-    # Excellence, Simplicity, Speed, Learning, Collaboration, Impact, etc.
+    - value: "Charge for Certainty, Not Hours"
+      definition: |
+        Our pricing model reflects execution certainty: subscription for baseline production,
+        premium for bounded manual work. We don't sell hours or effort—we sell shipped outcomes
+        with predictable scope and quality. This forces us to be honest about what's repeatable
+        (subscription) versus what requires interpretation (premium).
+      
+      behaviors_we_expect:
+        - "Package work as SKUs with defined scope, quality criteria, and pricing"
+        - "Separate subscription work (repeatable) from premium work (manual/custom)"
+        - "Be transparent about what's included versus what requires premium add-ons"
+        - "Continuously move work from premium to subscription as we systematize it"
+      
+      behaviors_we_reject:
+        - "Hourly billing that rewards inefficiency"
+        - "Vague scope definitions that enable endless revisions"
+        - "Bundling manual work into subscription to appear 'full-service'"
+        - "Resisting systematization to protect billable hours"
+      
+      example_decision: |
+        When designing the Content Cadence offering, we separated repeatable production
+        (4 blog posts/month at standard quality) from strategy work (topic ideation,
+        SEO keyword research). Standard production: subscription. Strategic input: premium.
+        This created clarity for clients and forced us to systematize what we could.
   
   value_conflicts:
-    - tension: "When two values conflict (e.g., Speed vs. Quality)"
-      resolution_principle: "How we resolve this tension"
+    - tension: "Execution Certainty vs. Speed-to-Market"
+      resolution_principle: |
+        We choose execution certainty. Shipping structured work that's reusable beats
+        rushing unstructured work that creates future debt. However, we timebox upfront
+        specification (max 20% of project time) to avoid analysis paralysis.
+    
+    - tension: "Automation vs. Human Judgment"
+      resolution_principle: |
+        We automate everything that can be confidently systematized. When uncertain,
+        we start with HITL (human-in-the-loop) and gradually expand automation as
+        confidence grows. Judgment stays human; execution scales through automation.
   
   # ============================================================================
   # 5. CORE BELIEFS - First Principles That Underpin Our Reasoning
@@ -169,46 +257,156 @@ north_star:
   
   core_beliefs:
     about_our_market:
-      - belief: "First principle about market dynamics"
-        implication: "Therefore, we must/should..."
-        evidence: "What supports this belief"
+      - belief: "AI has commoditized drafting but not execution certainty"
+        implication: |
+          Therefore, we compete on structured delivery and execution orchestration,
+          not on speed-to-draft or cost-per-word. The market will split into tiers:
+          commodity production (AI-only), managed execution systems (our play),
+          and judgment-led strategy partners (premium tier).
+        evidence: |
+          Generative AI can produce plausible drafts in seconds. But SMEs still struggle
+          to turn drafts into shipped work due to scoping, stakeholder alignment,
+          QA, and sustained momentum. The "implementation gap" is growing, not shrinking.
       
-      - belief: "Second principle about market"
-        implication: "Therefore..."
-        evidence: "Supporting evidence"
+      - belief: "Marketing services market is fragmenting, not consolidating"
+        implication: |
+          Therefore, buyers face choice overload (in-house, freelancers, agencies, specialists,
+          tools, templates, DIY+AI). We must offer clear packaging (SKUs) and transparent
+          scope boundaries to reduce decision complexity.
+        evidence: |
+          Traditional agencies face pressure from AI tools, freelancer marketplaces, and
+          specialized boutiques. No dominant player is emerging—instead, more micro-segmentation.
+          Buyers report decision fatigue: "too many options, unclear trade-offs."
+      
+      - belief: "Execution memory is the new moat, not creative IP"
+        implication: |
+          Therefore, we invest in structured data (SOPs, specs, labeled feedback) that compounds
+          over time. Agencies that optimize for short-term billable hours will lose to those
+          that build reusable execution systems.
+        evidence: |
+          Traditional agencies lose institutional memory when people leave. Clients restart
+          from zero with each new team. Structured execution systems (like engineering CI/CD)
+          preserve context and improve over time. Marketing has no equivalent—yet.
     
     about_our_users:
-      - belief: "Fundamental belief about user behavior or needs"
-        implication: "Therefore, we design/build/sell this way..."
-        evidence: "What validates this"
+      - belief: "SMEs can draft but can't execute at scale"
+        implication: |
+          Therefore, we don't sell drafting services—we sell execution systems.
+          Our clients already have ChatGPT. What they lack is the operating structure
+          to turn drafts into shipped outcomes reliably.
+        evidence: |
+          Target buyers (growth-oriented SMEs) report: "We can generate content ideas
+          and initial drafts. What kills us is scoping, prioritization, QA, publishing
+          workflow, and sustained cadence. We need a system, not more drafts."
       
-      - belief: "Another user-centric belief"
-        implication: "Therefore..."
-        evidence: "Evidence"
+      - belief: "Buyers value certainty over creativity in execution"
+        implication: |
+          Therefore, we lead with process transparency and scope clarity, not with
+          creative portfolios or 'award-winning campaigns.' Our sales pitch is
+          'you'll know what you're getting, when, and at what quality level.'
+        evidence: |
+          Win/loss analysis shows buyers choose us when they're frustrated by:
+          (1) scope ambiguity, (2) missed deadlines, (3) inconsistent quality.
+          They don't mention 'creative excellence' as a decision driver.
+      
+      - belief: "Internal capacity is the constraint, not budget"
+        implication: |
+          Therefore, we position as 'marketing operations partner' (extending capacity)
+          not 'creative agency' (selling campaigns). Pricing should reflect capacity
+          augmentation, not project fees.
+        evidence: |
+          Target segment has marketing budgets but lacks bandwidth to operationalize.
+          They'd rather pay for structured delivery than hire full-time coordinators.
     
     about_our_approach:
-      - belief: "Core belief about how to solve problems in our domain"
-        implication: "Therefore, our products/features work this way..."
-        evidence: "What proves this approach works"
+      - belief: "Atomization enables scale: work must be decomposable into structured 'bricks'"
+        implication: |
+          Therefore, we invest heavily in turning agency work into explicit specs, SOPs,
+          dependencies, and states. If work can't be atomized (fully custom, high-touch
+          strategy), it stays premium-tier, not subscription.
+        evidence: |
+          Engineering achieved scale through CI/CD, microservices, and infrastructure-as-code—
+          all forms of atomization. Marketing execution has no equivalent. Early pilots
+          show 3x throughput when work is structured vs. ad-hoc.
       
-      - belief: "Another methodological belief"
-        implication: "Therefore..."
-        evidence: "Evidence"
+      - belief: "Human-in-the-Loop (HITL) is a feature, not a limitation"
+        implication: |
+          Therefore, we charge premium for human judgment and accountability. Pure AI services
+          can't credibly take responsibility where ambiguity or high stakes exist. HITL lets
+          us justify pricing that autonomous tools can't.
+        evidence: |
+          Clients are willing to pay 2-3x for 'AI + human review' vs 'AI-only' because they
+          need accountability. Fully automated marketing services (e.g., Jasper AI) are cheap
+          but lack strategic oversight. We occupy the middle ground.
+      
+      - belief: "Subscription + premium layers is the sustainable model"
+        implication: |
+          Therefore, we package baseline production (subscription: predictable scope, repeatable work)
+          separate from manual/strategic layers (premium: interpretation, custom work). This forces
+          discipline: systematize what we can, charge premium for what we can't.
+        evidence: |
+          SaaS + services hybrid models (e.g., HubSpot, Salesforce) show this works:
+          software handles repeatable workflows, services handle custom implementation.
+          We apply the same logic to marketing execution.
     
     about_value_creation:
-      - belief: "Fundamental belief about how value is created/captured"
-        implication: "Therefore, our business model..."
-        evidence: "What supports this"
+      - belief: "Value compounds through operating memory, not through hours spent"
+        implication: |
+          Therefore, our business model rewards repeatability and learning, not effort.
+          Each delivery should improve the system (better SOPs, refined processes), creating
+          increasing margin over time as execution gets more efficient.
+        evidence: |
+          Traditional agency model: flat or declining margin as client demands grow.
+          Structured system model: increasing margin as systematization improves.
+          Software businesses prove this: unit costs decline as scale increases.
+      
+      - belief: "Clients pay for shipped outcomes, not inputs or effort"
+        implication: |
+          Therefore, we price on outcomes (e.g., '4 published blog posts with SEO optimization')
+          not inputs ('40 hours of content work'). This aligns our incentives with clients:
+          we win by getting more efficient, not by billing more hours.
+        evidence: |
+          Outcome-based pricing reduces buyer anxiety ('am I getting good value?') and
+          forces us to systematize. Hourly billing creates perverse incentives to be slow.
     
     about_competition:
-      - belief: "Core belief about competitive dynamics"
-        implication: "Therefore, we compete by..."
-        evidence: "What proves this"
+      - belief: "Market will split into clear tiers: commodity, managed execution, judgment-led strategy"
+        implication: |
+          Therefore, we don't try to compete on price (commodity tier) or brand prestige
+          (judgment-led tier). We compete on execution certainty and throughput:
+          'marketing execution as reliable as engineering delivery.'
+        evidence: |
+          Similar patterns in other markets: managed cloud services (AWS) between self-hosted (cheap)
+          and consulting firms (expensive). Market rewards the structured middle tier.
+      
+      - belief: "Traditional agencies will struggle to adapt because billable hours incentivize inefficiency"
+        implication: |
+          Therefore, our competitive advantage is structural, not just operational. Agencies
+          optimized for time-and-materials can't easily shift to outcome-based pricing without
+          rebuilding their entire operating model.
+        evidence: |
+          Incumbent agencies resist automation ('it'll replace our people') and systematization
+          ('every client is unique'). This creates opening for structured execution players.
     
     belief_challenges:
-      - belief: "Which core belief"
-        counter_evidence: "Evidence that might challenge this belief"
-        monitoring: "How we track if this belief still holds"
+      - belief: "AI has commoditized drafting but not execution certainty"
+        counter_evidence: |
+          If AI agents become capable of full end-to-end execution (scoping, QA, publishing,
+          stakeholder coordination), the execution gap might close without human-in-the-loop.
+          This would commoditize our core value proposition.
+        monitoring: |
+          Track AI agent capabilities quarterly. Monitor: (1) Can agents handle multi-step
+          workflows with context preservation? (2) Can clients trust AI for final approval?
+          (3) Are new 'full-stack marketing AI' products emerging?
+      
+      - belief: "Buyers value certainty over creativity in execution"
+        counter_evidence: |
+          High-growth startups or brand-focused companies might prioritize creative differentiation
+          over execution reliability. If our target segment shifts upmarket, this belief may
+          not hold.
+        monitoring: |
+          Track win/loss analysis. If we start losing deals to creative agencies (not efficiency
+          concerns), this belief needs revision. Survey clients on decision criteria annually.
   
   # ============================================================================
   # CONSISTENCY & ALIGNMENT
@@ -216,30 +414,43 @@ north_star:
   
   alignment_checks:
     purpose_vision_alignment: |
-      How does our vision fulfill our purpose?
-      Are they mutually reinforcing?
+      Our purpose is to close the implementation gap in marketing execution. Our vision is
+      a world where marketing execution is as reliable as engineering delivery. These are
+      mutually reinforcing: the purpose identifies the problem (implementation gap), the
+      vision articulates the solution state (engineering-grade reliability). If we achieve
+      our vision, we fulfill our purpose.
     
     mission_purpose_alignment: |
-      Does our mission (what we do) serve our purpose (why we exist)?
-      Is there a clear line?
+      Our mission—building and operating structured marketing execution systems—directly
+      serves our purpose of closing the implementation gap. By making execution machine-readable
+      (specs, SOPs, states), we turn the chaotic 'gap' into a structured system. The mission
+      is the operational expression of the purpose.
     
     values_mission_alignment: |
-      Do our values support how we execute our mission?
-      Any conflicts between values and what we do?
+      Our values (Execution Certainty, Structure Compounds, HITL, Charge for Certainty)
+      directly enable our mission. We can't build structured execution systems without
+      valuing structure over chaos. We can't operate sustainably without charging for
+      certainty rather than hours. Values and mission are tightly aligned.
     
     beliefs_inform_strategy: |
-      How do our core beliefs shape our strategic choices?
-      Are there beliefs that should influence current strategy work?
+      Our core beliefs shape every strategic choice:
+      - Belief that AI commoditized drafting → Strategy: compete on execution, not creative output
+      - Belief that execution memory is the moat → Strategy: invest in SOPs and structured data
+      - Belief that SMEs can draft but can't execute → Strategy: sell systems, not services
+      - Belief in subscription + premium layers → Strategy: systematize baseline, charge for custom
+      
+      Every strategic decision should trace back to one or more core beliefs. If a proposed
+      strategy doesn't align with beliefs, either the strategy is wrong or a belief needs updating.
   
   # ============================================================================
   # REVIEW & EVOLUTION
   # ============================================================================
   
   evolution_history:
-    - date: "YYYY-MM-DD"
-      what_changed: "Which element(s) changed"
-      why: "Reason for change (market shift, learning, pivot, etc.)"
-      impact: "How this affects ongoing cycles"
+    - date: "2026-01-05"
+      what_changed: "Initial population of VALUES and CORE BELIEFS sections"
+      why: "Formalizing strategic foundations based on Coupler GMS strategy v5.0 and Master Operating Manual"
+      impact: "Provides clear normative guidance for all cycle-specific strategy work going forward"
   
   next_review_triggers:
     scheduled: "Annual review date"

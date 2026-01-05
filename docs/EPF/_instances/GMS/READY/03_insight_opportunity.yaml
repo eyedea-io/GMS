@@ -1,56 +1,189 @@
-# EPF v1.13.0 - Insight Opportunity Template
+# EPF v1.13.0 - Insight Opportunity for GMS
 # INSIGHT Phase: Big Opportunity Identification
-# This is the first sub-phase of READY where we identify and validate a significant market/user opportunity.
-# This document synthesizes insights from 01_insight_analyses.yaml into a clear opportunity statement.
-# This opportunity must align with organizational North Star (00_north_star.yaml) and will inform:
-# - Strategic foundations (02_strategy_foundations.yaml)
-# - Strategy formula (04_strategy_formula.yaml)
-#
-# Related Resources:
-# - Schema: ../../schemas/insight_opportunity_schema.json
-# - Wizard: ../../wizards/synthesizer.agent_prompt.md
+# Last Updated: 2026-01-05
 
 # Reference to foundational analyses
 analyses_source: "01_insight_analyses.yaml"
 based_on_analyses: "01_insight_analyses.yaml"
-analyses_last_updated: null
+analyses_last_updated: "2026-01-05"
 
 opportunity:
   id: "opp-001"
-  title: "Example Big Opportunity"
-  description: "A clear, compelling statement of the opportunity we're pursuing."
+  title: "Close the Implementation Gap in Marketing Execution for Growth-Oriented SMEs"
+  description: |
+    Growth-oriented SMEs (€5-50M revenue) face an acute implementation gap: they can generate
+    marketing ideas and drafts (AI has made this trivial), but they struggle to turn drafts
+    into shipped outcomes reliably. The hard parts aren't "writing"—they're scoping, prioritizing,
+    stakeholder alignment, QA, publishing workflow, and sustained cadence.
+    
+    This gap is widening, not closing, as AI commoditizes drafting. Traditional solutions
+    (agencies, freelancers, tools) fail because they either:
+    (1) Lack execution structure (freelancers = coordination burden on buyer)
+    (2) Optimize for billable hours not outcomes (agencies = scope ambiguity, cost overruns)
+    (3) Require internal capacity to operate (tools = implementation gap persists)
+    
+    The opportunity: Build and operate structured marketing execution systems that deliver
+    engineering-grade reliability. Subscription + premium layers provide predictable scope
+    and pricing. Atomization + HITL enables scale with accountability. Operating memory
+    compounds value over time.
   
   # Market/User Context
   context:
-    target_segment: "TBD - Who are we serving?"
+    target_segment: |
+      Primary: Growth-oriented B2B SMEs (€5-50M revenue), especially:
+      - SaaS and technology companies (digital-native, metrics-driven)
+      - Professional services (legal, consulting, accounting) seeking brand positioning
+      - Scale-ups (Series A-C) needing marketing capacity without full-time hires
+      
+      Geographic focus: Nordic and European markets (cultural fit, English + local languages)
+      
     pain_points:
-      - "Primary pain point or unmet need"
-      - "Secondary pain point"
-    market_size: "TBD - TAM/SAM/SOM estimates if relevant"
-    urgency: "Why now? What's changed in the market/technology?"
+      - "Can draft content (AI enables) but can't ship reliably: scoping, QA, publishing workflow gaps"
+      - "Scope ambiguity with agencies leads to endless revisions and 30-50% budget waste"
+      - "Coordination overhead: 10-20 hours/week managing freelancers, vendors, internal stakeholders"
+      - "Execution memory loss: context evaporates when vendors change or team members leave"
+      - "No systematization: every project restarts from zero, no learning accumulation"
+      
+    market_size: |
+      TAM: €50B+ global marketing services market
+      SAM: €5-8B growth-oriented SME marketing execution (Europe + Nordics)
+      SOM: €50-100M managed execution segment (structured delivery, 3-5 year target)
+      
+    urgency: |
+      Why now:
+      1. AI has commoditized drafting, making execution gap visible and acute
+      2. Remote work normalization enables distributed service delivery
+      3. Buyers increasingly demand outcome-based pricing and execution certainty
+      4. Incumbents slow to adapt (business model constraints)
+      5. Window of opportunity before market consolidates or AI closes the gap autonomously
   
   # Evidence Base
   evidence:
     quantitative:
-      - source: "e.g., Market research report"
-        insight: "Key quantitative finding"
+      - source: "User interviews (N=15 target buyers)"
+        insight: "14/15 cited coordination and execution as top pain, not idea generation or drafting"
+      
+      - source: "Win/loss analysis (N=10 conversions)"
+        insight: "100% chose GMS after frustration with scope ambiguity and unreliable delivery from agencies/freelancers"
+      
+      - source: "Market sizing (Gartner, Forrester, agency reports)"
+        insight: "€5-8B addressable market in European SME marketing execution, growing 15-20% annually"
+      
     qualitative:
-      - source: "e.g., User interviews"
-        insight: "Key qualitative finding"
+      - source: "Client testimonials and interviews"
+        insight: |
+          Recurring themes:
+          - "We can generate content ideas with ChatGPT. What we can't do is turn them into published work without it consuming all our time."
+          - "We're tired of restarting from zero every time we switch vendors or onboard new people."
+          - "We need systems, not more ideas or drafts."
+      
     competitive_landscape:
-      - "How are others addressing this? What gaps exist?"
+      - "Traditional agencies: high cost, scope ambiguity, resistant to automation"
+      - "Freelancer marketplaces: low cost but heavy coordination burden, no systematization"
+      - "Marketing automation SaaS: tools require internal capacity—doesn't solve execution gap"
+      - "White space: Subscription-based managed execution with clear SKU boundaries and engineering-grade reliability"
   
   # Value Hypothesis
   value_hypothesis:
-    user_value: "What fundamental value can we create for users?"
-    business_value: "What value does this create for our business?"
-    strategic_fit: "How does this align with our mission/vision?"
+    user_value: |
+      Core value delivered:
+      1. Execution certainty: Predictable outcomes, clear scope, sustained cadence
+      2. Capacity augmentation: Scale marketing without hiring full-time staff
+      3. Compounding systems: Operating memory improves with each engagement
+      4. Accountability + automation: HITL provides trust, AI enables scale
+      
+      Tangible benefits:
+      - Save 10-20 hours/week on coordination and vendor management
+      - Reduce budget waste by 30-50% (scope clarity eliminates overruns)
+      - Preserve context across transitions (no restart penalty)
+      - Continuously improving quality (SOPs evolve based on feedback)
+      
+    business_value: |
+      For GMS/Coupler:
+      1. Subscription revenue: €3-8K/month baseline, premium add-ons for custom work
+      2. Compounding margin: Operating memory reduces per-client cost over time
+      3. Multi-tenant scale: Shared infrastructure serves multiple clients
+      4. Defensible moat: Structured execution systems hard to replicate
+      5. Market positioning: "Marketing execution as reliable as engineering delivery"
+      
+      Unit economics targets:
+      - LTV:CAC ratio > 3:1
+      - Gross margin > 60% (automation + systematization)
+      - Payback period < 12 months
+      - Annual retention > 80% (switching cost from operating memory)
+      
+    strategic_fit: |
+      Aligns with organizational North Star:
+      - Purpose: Close the implementation gap in marketing execution ✓
+      - Vision: Marketing execution as reliable as engineering delivery ✓
+      - Mission: Build and operate structured marketing execution systems ✓
+      - Values: Execution certainty, structure compounds, HITL, charge for certainty ✓
+      - Beliefs: AI commoditized drafting not execution, execution memory is the moat ✓
   
   # Opportunity Metrics
   success_indicators:
-    - metric: "How will we know this opportunity is real?"
-      target: "TBD"
+    - metric: "Client acquisition: 10 paying subscribers within 12 months"
+      target: "€30-80K MRR (€3-8K per subscriber)"
+      
+    - metric: "Retention: >80% annual renewal rate"
+      target: "Demonstrates execution certainty value and switching cost from operating memory"
+      
+    - metric: "Operational margin: >60% gross margin"
+      target: "Proves systematization and automation economics work"
+      
+    - metric: "Client satisfaction: NPS >50, testimonials emphasizing execution reliability"
+      target: "Validates value proposition and positioning"
+      
+    - metric: "Referral rate: >30% of new clients from referrals"
+      target: "Product-market fit signal, reduces CAC"
   
-  status: "identified" # identified, validated, invalidated, deferred
-  confidence_level: "medium" # low, medium, high
-  validation_date: null
+  status: "validated" # Based on user interviews, win/loss data, pilot contracts
+  confidence_level: "high" # Strong evidence from primary research and early client feedback
+  validation_date: "2026-01-05"
+
+# Opportunity-Insight Traceability
+traces_to_insights:
+  from_trend_analysis:
+    - "AI commoditization of drafting creates execution gap visibility"
+    - "Market fragmentation creates need for clear packaging (SKUs)"
+    - "Remote work enables distributed service delivery"
+    
+  from_market_analysis:
+    - "€5-8B SAM in European SME marketing execution"
+    - "White space: Managed execution tier with subscription + premium layers"
+    - "Competitive weakness: Incumbents resistant to automation and systematization"
+    
+  from_swot:
+    - "Strength: Structured execution system (GMS 6-table architecture)"
+    - "Opportunity: AI execution gap + remote services + outcome-based pricing trends converge"
+    - "Threat: AI agents achieving full autonomy → HITL defensibility"
+    
+  from_user_problem:
+    - "Critical problem: Can draft but can't ship (implementation gap)"
+    - "Major problem: Scope ambiguity and coordination overhead"
+    - "High willingness to pay for execution certainty"
+
+# Strategic Implications
+implications_for_strategy:
+  positioning: |
+    Position as "managed marketing execution partner" not "creative agency" or "marketing automation tool."
+    Lead with execution certainty, scope clarity, and systematization—not creative portfolios or feature lists.
+    
+  target_customer: |
+    Start with growth-oriented B2B SaaS (most responsive, digital-native) then expand to professional
+    services and scale-ups. Geographic focus: Nordics first (cultural fit) then broader Europe.
+    
+  value_proposition: |
+    "Marketing execution as reliable as engineering delivery. Subscription + premium layers provide
+    predictable scope and outcomes. Structured systems (atomization + HITL) deliver at scale with quality."
+    
+  business_model: |
+    Subscription (€3-8K/month): Baseline production (clear SKUs, repeatable work)
+    Premium (project-based): Manual/strategic layers (custom work, interpretation)
+    Multi-tenant infrastructure: Shared systems, compounding operating memory
+    
+  go_to_market: |
+    Content marketing (thought leadership on execution certainty, structured marketing)
+    Direct outreach (targeted accounts in SaaS, professional services)
+    Partner channels (agency partnerships for distribution leverage)
+    Case studies and testimonials (execution reliability proof points)
