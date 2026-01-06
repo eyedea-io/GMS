@@ -1,7 +1,11 @@
 # EPF Instance Metadata
 product_id: "GMS"
+product_name: "GMS (Growth Marketing System)"
+organization: "Coupler"
+organization_context: "Coupler currently has one product line: GMS"
 created: "2026-01-05"
 epf_version: "1.11.0"
 status: "active"
 
 # Update this metadata as your instance evolves
+# Note: If Coupler expands to multiple products, consider creating a product_portfolio.yaml

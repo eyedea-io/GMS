@@ -1,6 +1,8 @@
 # GMS - EPF Instance
 
-This directory contains the Emergent Product Framework (EPF) strategic artifacts for **GMS**.
+This directory contains the Emergent Product Framework (EPF) strategic artifacts for **GMS** (Growth Marketing System), developed by **Coupler**.
+
+**Company Context:** Coupler currently has one product line: GMS. This EPF instance manages the strategic foundation, execution planning, and learning cycles for GMS.
 
 ## Structure
 

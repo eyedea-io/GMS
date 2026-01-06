@@ -1,0 +1,557 @@
+# GMS Product Value Model
+# EPF v1.13.0
+#
+# This document defines the value delivered by GMS (Growth Marketing System)
+# across multiple user types: Clients, Contributors, Agency Staff, and System Administrators.
+#
+# CRITICAL: This is a BRIDGE DOCUMENT serving two audiences:
+# 1. Business Stakeholders (investors, executives, BD) - must understand value without technical knowledge
+# 2. Engineering Teams (developers, architects, DevOps) - need implementation context
+#
+# LANGUAGE RULES:
+# - Component names & UVPs: BUSINESS LANGUAGE ONLY (what value, who benefits)
+# - Context tags: Technical details prefixed with "Technical:" for engineering team
+# - See docs/guides/VALUE_MODEL_BUSINESS_LANGUAGE_GUIDE.md for complete guidance
+
+track_name: "Product"
+version: "1.0.0"
+status: "active"
+description: "GMS delivers structured marketing execution for growth-oriented SMEs. The product provides a multi-tenant system that coordinates marketing work across clients, internal contributors, external contributors, and agency staff. Value is delivered through predictable, machine-readable execution workflows that turn marketing intent into shipped outcomes."
+packaged_default: false
+high_level_model:
+  product_mission: "Enable structured, repeatable, and continuously improving marketing execution for growth-oriented SMEs through a coordinated system that bridges clients, contributors, and agency operations."
+  main_goal: "Close the implementation gap in marketing execution by making work machine-readable: specs, SOPs, dependencies, states, and learning signals."
+  product_goals:
+    - "Transform marketing execution from ad-hoc interpretation into structured, trackable workflows"
+    - "Enable multi-tenant operations serving multiple clients and partner agencies through shared infrastructure"
+    - "Provide execution certainty: clients know what they're getting, when, and at what cost"
+    - "Compound learning over time: execution improves with each delivery through structured feedback"
+    - "Support subscription + premium pricing model with clear value tiers"
+  value_delivery_description:
+    - "Client App: Enhances project visibility and process transparency, giving clients control and predictability over marketing execution"
+    - "Contributor App: Facilitates seamless integration of internal and external expertise, matching skills to tasks efficiently"
+    - "Agency App: Streamlines agency operations and project delivery with structured workflows and resource management"
+    - "Admin App: Provides system-level control over organization structure, access, and product catalog"
+    - "Technical Infrastructure: Delivers reliable, scalable, and secure platform foundation for all user-facing capabilities"
+  needs_addressed:
+    - "Execution gap: SMEs can generate marketing drafts but struggle to ship them due to coordination, scoping, and QA challenges"
+    - "Scope interpretation uncertainty: unclear requirements lead to rework, conflicts, and wasted effort"
+    - "Coordination complexity: managing work across internal teams, freelancers, and vendors is fragmented"
+    - "Knowledge evaporation: learnings and context disappear when people leave"
+    - "Lack of execution predictability: buyers don't know what they'll get or when"
+  values_delivered:
+    - "Execution certainty: structured specs and SOPs ensure predictable, repeatable delivery"
+    - "Coordination efficiency: work flows seamlessly across clients, contributors, and agency staff"
+    - "Continuous improvement: structured feedback and learning signals compound over time"
+    - "Multi-tenant scale: serve multiple clients and partners through shared, efficient infrastructure"
+    - "Transparent progress: all stakeholders see project status, milestones, and performance in real-time"
+  solution_steps:
+    - step: "Digitize marketing work into machine-readable specs, SOPs, and structured database records"
+      outcome: "Marketing execution becomes trackable, repeatable, and continuously improving rather than ad-hoc interpretation"
+    - step: "Orchestrate work across AI drafting, human refinement, and multi-channel implementation"
+      outcome: "Clients receive predictable, high-quality outcomes without managing coordination complexity"
+    - step: "Package baseline production as subscription with bounded manual work as premium add-ons"
+      outcome: "Pricing model aligns with delivered value and enables sustainable growth"
+    - step: "Build multi-tenant infrastructure that serves multiple clients and partner agencies simultaneously"
+      outcome: "Operations scale efficiently without linear cost growth per client"
+activation_notes: |
+  GMS is being built as an integrated system across all layers. Start with Client App and Agency App
+  as primary value delivery layers, then expand Contributor App features as contributor ecosystem grows.
+  Admin App is foundational for multi-tenant operations. Technical Infrastructure supports all layers.
+
+  Activation sequence:
+  1. Layer 1 (Client App) - Core visibility and collaboration features
+  2. Layer 2 (Agency App) - Project management and resource allocation
+  3. Layer 3 (Contributor App) - Task management and skill matching
+  4. Layer 4 (Admin App) - Organization and security management
+  5. Layer 5 (Technical Infrastructure) - Scalable, secure foundation
+# ==============================================================================
+# LAYER 1: CLIENT APP
+# ==============================================================================
+# Target User: Clients
+# Value Proposition: Enhancing project visibility and process for users
+layers:
+  - id: client-app
+    name: "Client App"
+    description: |
+      The Client App provides clients with comprehensive visibility into their marketing projects,
+      enabling them to participate actively in planning, provide feedback, approve work, and monitor
+      progress. This layer closes the gap between marketing intent and executed outcomes by giving
+      clients structured tools to define requirements, collaborate with the delivery team, and track
+      milestones in real-time. Value is delivered through reduced uncertainty, clearer communication,
+      and predictable execution timelines.
+    solution_steps:
+      - step: "Provide structured requirement definition and budget setting tools"
+        outcome: "Clients can clearly articulate marketing needs and financial constraints upfront, reducing scope ambiguity"
+      - step: "Enable real-time feedback and approval workflows integrated into delivery process"
+        outcome: "Work progresses smoothly without delays waiting for client input or approval"
+      - step: "Deliver comprehensive milestone tracking and performance dashboards"
+        outcome: "Clients see project status at any time, building trust and reducing status-update overhead"
+      - step: "Support iterative collaboration throughout project lifecycle"
+        outcome: "Ongoing clarification and refinement prevents late-stage rework and misalignment"
+    components:
+      # Component: Project Planning
+      - id: client-project-planning
+        name: "Project Planning"
+        description: |
+          Project Planning enables clients to initiate marketing projects by defining requirements,
+          setting budgets, and establishing success criteria. This component transforms vague marketing
+          intent into structured, actionable specifications that guide execution and reduce interpretation
+          risk.
+        sub_components:
+          - id: requirement-definition
+            name: "Requirement Definition"
+            active: false
+            premium: false
+            uvp: "Marketing requirements are captured in structured formats so that clients can clearly communicate intent, which helps us eliminate scope ambiguity and reduce rework."
+          - id: budget-setting
+            name: "Budget Setting"
+            active: false
+            premium: false
+            uvp: "Project budgets are defined upfront with transparent cost breakdowns so that clients can make informed investment decisions, which helps us align execution with financial constraints."
+      # Component: Collaboration
+      - id: client-collaboration
+        name: "Collaboration"
+        description: |
+          Collaboration tools enable ongoing communication between clients and the delivery team,
+          providing structured feedback mechanisms and approval workflows that keep projects moving
+          forward efficiently without bottlenecks or misunderstandings.
+        sub_components:
+          - id: feedback-mechanism
+            name: "Feedback Mechanism"
+            active: false
+            premium: false
+            uvp: "Structured feedback channels are provided so that clients can share input on drafts and deliverables, which helps us incorporate client perspective and improve quality."
+          - id: approval-workflow
+            name: "Approval Workflow"
+            active: false
+            premium: false
+            uvp: "Formal approval processes are integrated into project workflows so that clients can sign off on work at key milestones, which helps us ensure alignment and prevent late-stage surprises."
+      # Component: Monitoring
+      - id: client-monitoring
+        name: "Monitoring"
+        description: |
+          Monitoring capabilities give clients real-time visibility into project progress, performance
+          metrics, and milestone achievement, building trust through transparency and reducing the need
+          for manual status updates.
+        sub_components:
+          - id: milestone-tracking
+            name: "Milestone Tracking"
+            active: false
+            premium: false
+            uvp: "Project milestones are tracked in real-time with progress indicators so that clients can see execution status at any moment, which helps us build trust through transparency."
+          - id: performance-dashboard
+            name: "Performance Dashboard"
+            active: false
+            premium: false
+            uvp: "Project performance metrics and KPIs are displayed in visual dashboards so that clients can assess campaign effectiveness, which helps us demonstrate delivered value."
+  # ==============================================================================
+  # LAYER 2: CONTRIBUTOR APP
+  # ==============================================================================
+  # Target User: Contributors (internal and external)
+  # Value Proposition: Facilitating seamless integration of internal and external expertise
+  - id: contributor-app
+    name: "Contributor App"
+    description: |
+      The Contributor App enables both internal team members and external contributors (freelancers,
+      specialists) to receive task assignments, manage their workload, communicate with the agency team,
+      and deliver high-quality work. This layer makes it seamless to integrate diverse expertise into
+      marketing execution, matching skills to tasks and ensuring consistent quality across contributors.
+      Value is delivered through efficient task allocation, clear communication, and structured delivery
+      workflows.
+    solution_steps:
+      - step: "Match contributor skills to project requirements automatically"
+        outcome: "Right expertise is allocated to each task, improving quality and reducing rework"
+      - step: "Provide clear task assignments with deadlines and acceptance criteria"
+        outcome: "Contributors understand exactly what's expected, when, and to what standard"
+      - step: "Enable seamless asset sharing and communication between contributors and agency"
+        outcome: "Work flows efficiently without coordination bottlenecks or lost context"
+      - step: "Track deliverable submission and progress reporting for all assigned work"
+        outcome: "Agency maintains visibility into contributor capacity and delivery status"
+    components:
+      # Component: Task Management
+      - id: contributor-task-management
+        name: "Task Management"
+        description: |
+          Task Management provides contributors with visibility into their assigned work, deadlines,
+          and deliverable requirements. Contributors can accept assignments, track progress, and
+          submit completed work through structured workflows that ensure quality and timeliness.
+        sub_components:
+          - id: assignment-acceptance
+            name: "Assignment Acceptance"
+            active: false
+            premium: false
+            uvp: "Task assignments are presented with clear scope and deadlines so that contributors can accept work that fits their capacity, which helps us match availability to demand."
+          - id: deadline-tracking
+            name: "Deadline Tracking"
+            active: false
+            premium: false
+            uvp: "Task deadlines are tracked with reminders and alerts so that contributors can manage their workload effectively, which helps us ensure on-time delivery."
+      # Component: Resource Matching
+      - id: contributor-resource-matching
+        name: "Resource Matching"
+        description: |
+          Resource Matching intelligently connects project needs with contributor capabilities,
+          considering skills, specializations, availability, and past performance to optimize
+          task allocation and ensure high-quality outcomes.
+        sub_components:
+          - id: skill-matching
+            name: "Skill Matching"
+            active: false
+            premium: false
+            uvp: "Contributor skills are matched to project requirements automatically so that the right expertise is allocated to each task, which helps us improve quality and reduce rework."
+          - id: availability-management
+            name: "Availability Management"
+            active: false
+            premium: false
+            uvp: "Contributor availability is tracked in real-time so that only contributors with capacity receive new assignments, which helps us prevent overload and maintain delivery reliability."
+      # Component: Communication
+      - id: contributor-communication
+        name: "Communication"
+        description: |
+          Communication tools enable contributors to share work in progress, receive feedback,
+          and collaborate with the agency team throughout task execution, ensuring alignment
+          and enabling timely course corrections.
+        sub_components:
+          - id: asset-sharing
+            name: "Asset Sharing"
+            active: false
+            premium: false
+            uvp: "Work assets and files are shared securely through integrated channels so that contributors can deliver work and receive feedback efficiently, which helps us streamline collaboration."
+          - id: communication-channels
+            name: "Communication Channels"
+            active: false
+            premium: false
+            uvp: "Direct communication channels connect contributors with agency staff so that questions can be answered quickly, which helps us prevent delays and misunderstandings."
+  # ==============================================================================
+  # LAYER 3: AGENCY APP
+  # ==============================================================================
+  # Target User: Agency staff
+  # Value Proposition: Streamlining agency operations and project delivery
+  - id: agency-app
+    name: "Agency App"
+    description: |
+      The Agency App is the operational hub for agency staff, providing tools to manage projects,
+      allocate resources, coordinate work across clients and contributors, and ensure quality throughout
+      the delivery lifecycle. This layer enables efficient multi-project operations by centralizing
+      project setup, task allocation, resource planning, and quality assurance in one integrated system.
+      Value is delivered through streamlined operations, efficient resource utilization, and consistent
+      quality control.
+    solution_steps:
+      - step: "Transform client requests into structured projects with clear scope and tasks"
+        outcome: "Agency staff can quickly initiate new projects with proper planning and resource allocation"
+      - step: "Allocate team members and contributors to projects based on skills and capacity"
+        outcome: "Resources are utilized efficiently, preventing overload while maximizing throughput"
+      - step: "Coordinate project execution across multiple clients and contributors simultaneously"
+        outcome: "Agency maintains control over complex operations without coordination bottlenecks"
+      - step: "Ensure quality through structured review processes and performance tracking"
+        outcome: "Delivered work meets standards consistently, building client trust and reducing rework"
+    components:
+      # Component: Project Management
+      - id: agency-project-management
+        name: "Project Management"
+        description: |
+          Project Management enables agency staff to set up new projects, break them into tasks,
+          allocate those tasks to contributors, and track overall project progress. This component
+          provides the operational structure that keeps multiple client projects moving forward
+          simultaneously.
+        sub_components:
+          - id: project-setup
+            name: "Project Setup"
+            active: false
+            premium: false
+            uvp: "New client projects are initialized with structured workflows and templates so that agency staff can launch work quickly, which helps us reduce time-to-execution and ensure consistency."
+          - id: task-allocation
+            name: "Task Allocation"
+            active: false
+            premium: false
+            uvp: "Project tasks are assigned to appropriate contributors based on skills and availability so that work flows efficiently, which helps us optimize resource utilization."
+          - id: project-insights
+            name: "Project Insights"
+            active: false
+            premium: false
+            uvp: "Project health metrics and bottleneck indicators are surfaced in real-time so that agency staff can intervene proactively, which helps us prevent delays and quality issues."
+      # Component: Resource Management
+      - id: agency-resource-management
+        name: "Resource Management"
+        description: |
+          Resource Management provides agency staff with visibility into team capacity, skill
+          distribution, and workload across all projects, enabling intelligent allocation decisions
+          that balance quality, speed, and team sustainability.
+        sub_components:
+          - id: team-assignment
+            name: "Team Assignment"
+            active: false
+            premium: false
+            uvp: "Team members are assigned to projects based on expertise and availability so that the right people work on the right projects, which helps us maximize quality and efficiency."
+          - id: capacity-planning
+            name: "Capacity Planning"
+            active: false
+            premium: false
+            uvp: "Team capacity and workload forecasts are visualized across upcoming projects so that agency staff can plan resource allocation strategically, which helps us prevent burnout and maintain throughput."
+      # Component: Quality Assurance
+      - id: agency-quality-assurance
+        name: "Quality Assurance"
+        description: |
+          Quality Assurance tools enable agency staff to review deliverables, provide feedback,
+          track revisions, and ensure work meets standards before delivery to clients. This component
+          protects brand reputation and client satisfaction through systematic quality control.
+        sub_components:
+          - id: review-process
+            name: "Review Process"
+            active: false
+            premium: false
+            uvp: "Structured review workflows are enforced for all deliverables so that quality checks happen consistently, which helps us maintain high standards and reduce client-facing errors."
+          - id: performance-metrics
+            name: "Performance Metrics"
+            active: false
+            premium: false
+            uvp: "Contributor and project performance metrics are tracked over time so that agency staff can identify quality trends and improvement opportunities, which helps us continuously improve execution."
+  # ==============================================================================
+  # LAYER 4: ADMIN APP (System Layer)
+  # ==============================================================================
+  # Target User: Agency staff (system administrators)
+  # Value Proposition: System-level control and multi-tenant management
+  - id: admin-app
+    name: "Admin App"
+    description: |
+      The Admin App provides system-level capabilities for managing organizations, users, access
+      control, and product catalogs across the multi-tenant GMS platform. This layer enables secure,
+      scalable operations by centralizing administrative functions that govern how clients, contributors,
+      and agency staff interact with the system. Value is delivered through secure access control,
+      organizational structure management, and flexible product configuration.
+    solution_steps:
+      - step: "Define organizational hierarchies and multi-tenant boundaries"
+        outcome: "Multiple clients and partner agencies operate independently without data leakage or interference"
+      - step: "Manage user accounts, roles, and permissions across the platform"
+        outcome: "Right people have access to right capabilities, maintaining security and compliance"
+      - step: "Configure product catalogs and service offerings per organization"
+        outcome: "Different clients can be offered customized packages aligned with their needs and contracts"
+      - step: "Enforce role-based access control and security policies"
+        outcome: "Sensitive data and operations are protected from unauthorized access"
+    components:
+      # Component: Administration
+      - id: admin-administration
+        name: "Administration"
+        description: |
+          Administration capabilities enable system administrators to create and manage organizations,
+          configure organizational hierarchies, manage user accounts, and maintain system-wide settings.
+          This component provides the foundational controls for multi-tenant operations.
+        sub_components:
+          - id: organization-management
+            name: "Organization Management"
+            active: false
+            premium: false
+            uvp: "Organizations and their hierarchies are defined and managed centrally so that multi-tenant boundaries are enforced correctly, which helps us operate securely at scale."
+          - id: user-management
+            name: "User Management"
+            active: false
+            premium: false
+            uvp: "User accounts are created, updated, and deactivated through centralized workflows so that access is controlled precisely, which helps us maintain security and compliance."
+      # Component: Security
+      - id: admin-security
+        name: "Security"
+        description: |
+          Security capabilities enforce access control policies, manage permissions, and ensure
+          data isolation between organizations. This component protects sensitive client data and
+          operational information from unauthorized access.
+        sub_components:
+          - id: role-based-access-control
+            name: "Role-Based Access Control"
+            active: false
+            premium: false
+            uvp: "User permissions are managed through roles and policies so that access is granted based on job function, which helps us enforce least-privilege security principles."
+      # Component: Structure
+      - id: admin-structure
+        name: "Structure"
+        description: |
+          Structure capabilities enable administrators to define organizational hierarchies,
+          configure product catalogs, and manage service offerings that clients can purchase.
+          This component provides flexibility to customize GMS for different client needs and
+          business models.
+        sub_components:
+          - id: organizational-hierarchy
+            name: "Organizational Hierarchy"
+            active: false
+            premium: false
+            uvp: "Organizational structures and reporting relationships are defined flexibly so that GMS can adapt to diverse client operating models, which helps us serve varied customer segments."
+          - id: product-catalog
+            name: "Product Catalog"
+            active: false
+            premium: false
+            uvp: "Available services and packages are configured per organization so that clients see offerings aligned with their contracts, which helps us support flexible pricing and packaging strategies."
+  # ==============================================================================
+  # LAYER 5: TECHNICAL INFRASTRUCTURE
+  # ==============================================================================
+  # Target User: Developers and App ops staff
+  # Value Proposition: Reliable, scalable, secure technical foundation
+  - id: technical-infrastructure
+    name: "Technical Infrastructure"
+    description: |
+      Technical Infrastructure provides the foundational platform capabilities that support all
+      user-facing layers: APIs for integration, data storage and retrieval, third-party integrations,
+      authentication and security, monitoring and operations, and deployment infrastructure. This layer
+      enables reliable, scalable, and secure operations while remaining invisible to end users. Value
+      is delivered through system reliability, performance, security, and operational efficiency.
+    solution_steps:
+      - step: "Build RESTful and GraphQL APIs for all application capabilities"
+        outcome: "User-facing apps access backend services reliably with well-defined interfaces"
+      - step: "Implement secure data storage with multi-tenant isolation guarantees"
+        outcome: "Client data remains protected and isolated, meeting security and compliance requirements"
+      - step: "Integrate with external marketing tools and platforms"
+        outcome: "GMS connects to client's existing marketing technology stack, reducing friction"
+      - step: "Deploy comprehensive monitoring, logging, and alerting infrastructure"
+        outcome: "Operations team detects and resolves issues before they impact users"
+      - step: "Establish automated deployment pipelines with zero-downtime releases"
+        outcome: "Platform evolves continuously without service interruptions"
+    components:
+      # Component: API Layer
+      - id: infra-api-layer
+        name: "Application Programming Interfaces"
+        description: |
+          APIs provide the contract between user-facing applications and backend services,
+          enabling reliable, performant data access and business logic execution. This component
+          abstracts technical complexity while exposing capabilities that power all user experiences.
+        context: "Technical: RESTful HTTP APIs and GraphQL endpoints provide access to core platform capabilities. APIs handle authentication, authorization, rate limiting, and data validation."
+        sub_components:
+          - id: rest-api
+            name: "REST API Endpoints"
+            active: false
+            premium: false
+            uvp: "Standard HTTP interfaces are provided for core operations so that client applications can access data and trigger workflows reliably, which helps us maintain consistent user experiences."
+            context: "Technical: RESTful API following OpenAPI 3.0 specification with JSON payloads, OAuth 2.0 authentication, and versioned endpoints."
+          - id: graphql-api
+            name: "GraphQL Query Interface"
+            active: false
+            premium: false
+            uvp: "Flexible data querying is enabled through GraphQL so that applications can fetch exactly the data they need, which helps us optimize performance and reduce over-fetching."
+            context: "Technical: GraphQL API with real-time subscriptions over WebSocket, schema-based type safety, and query complexity analysis for performance protection."
+      # Component: Data Platform
+      - id: infra-data-platform
+        name: "Data Storage and Processing"
+        description: |
+          Data Platform manages persistent storage of projects, tasks, users, and all operational
+          data with strong consistency, backup/recovery, and multi-tenant isolation guarantees.
+          This component ensures data reliability and availability while scaling efficiently.
+        context: "Technical: PostgreSQL relational database with row-level security for tenant isolation, Redis for caching and session management, S3-compatible object storage for file assets."
+        sub_components:
+          - id: relational-database
+            name: "Structured Data Storage"
+            active: false
+            premium: false
+            uvp: "Project, user, and operational data is stored reliably with transactional consistency so that system state remains accurate, which helps us prevent data loss and corruption."
+            context: "Technical: PostgreSQL database with automated backups, point-in-time recovery, and row-level security policies enforcing tenant boundaries."
+          - id: file-storage
+            name: "Asset and File Management"
+            active: false
+            premium: false
+            uvp: "Marketing assets and deliverable files are stored securely with versioning so that contributors and clients can access current and historical content, which helps us maintain complete project history."
+            context: "Technical: S3-compatible object storage with encryption at rest, versioning enabled, and lifecycle policies for archival and cost optimization."
+          - id: caching-layer
+            name: "Performance Caching"
+            active: false
+            premium: false
+            uvp: "Frequently accessed data is cached in memory so that applications respond instantly to user actions, which helps us deliver responsive user experiences."
+            context: "Technical: Redis in-memory data store for session management, query result caching, and real-time event pub/sub with TTL-based expiration."
+      # Component: Integrations
+      - id: infra-integrations
+        name: "External Platform Connectivity"
+        description: |
+          Integrations connect GMS to external marketing tools, communication platforms, and
+          business systems that clients already use, enabling data flow and workflow automation
+          across the marketing technology stack.
+        context: "Technical: Integration framework supporting OAuth 2.0, API key authentication, and webhook-based event notifications. Includes retry logic, rate limiting, and error handling."
+        sub_components:
+          - id: marketing-tool-integrations
+            name: "Marketing Platform Connections"
+            active: false
+            premium: true
+            uvp: "Client's existing marketing tools are integrated seamlessly so that data flows automatically between systems, which helps us reduce manual data entry and synchronization overhead."
+            context: "Technical: Integrations with email marketing platforms (Mailchimp, SendGrid), social media schedulers, CMS platforms, and analytics tools via REST APIs and webhooks."
+          - id: communication-integrations
+            name: "Communication Platform Bridges"
+            active: false
+            premium: false
+            uvp: "Team communication happens in familiar tools like Slack or Teams so that collaboration flows naturally, which helps us reduce tool friction and improve adoption."
+            context: "Technical: Slack and Microsoft Teams integrations for notifications, bot interactions, and file sharing via platform APIs and incoming webhooks."
+      # Component: Security and Authentication
+      - id: infra-security
+        name: "Security and Access Control"
+        description: |
+          Security capabilities protect the platform and client data through authentication,
+          authorization, encryption, audit logging, and compliance controls. This component
+          ensures GMS meets enterprise security and regulatory requirements.
+        context: "Technical: OAuth 2.0 + OIDC for authentication, JWT tokens for session management, role-based access control (RBAC) enforcement at API layer, audit logs for compliance."
+        sub_components:
+          - id: authentication-service
+            name: "User Authentication"
+            active: false
+            premium: false
+            uvp: "User identities are verified securely with multi-factor options so that only authorized individuals access the platform, which helps us prevent unauthorized access."
+            context: "Technical: OAuth 2.0 + OpenID Connect authentication supporting SSO, SAML, and social login providers. MFA via TOTP and SMS."
+          - id: authorization-enforcement
+            name: "Permission Enforcement"
+            active: false
+            premium: false
+            uvp: "User permissions are enforced consistently across all operations so that sensitive data and actions remain protected, which helps us maintain least-privilege access control."
+            context: "Technical: Role-based access control (RBAC) with attribute-based policies, enforced at API gateway and database row-level security (RLS)."
+          - id: audit-logging
+            name: "Compliance Audit Trails"
+            active: false
+            premium: true
+            uvp: "All user actions and data changes are logged immutably so that security incidents can be investigated, which helps us meet compliance and regulatory requirements."
+            context: "Technical: Comprehensive audit logging to immutable log storage (S3 or CloudWatch Logs), capturing user actions, data mutations, and system events with timestamp and actor attribution."
+      # Component: Operations and Monitoring
+      - id: infra-operations
+        name: "Platform Operations and Observability"
+        description: |
+          Operations capabilities enable the operations team to monitor system health, diagnose
+          issues, track performance, and respond to incidents before they impact users. This
+          component provides visibility into system behavior and reliability.
+        context: "Technical: Prometheus for metrics collection, Grafana for dashboards, ELK/Loki for log aggregation, PagerDuty for alerting and on-call management."
+        sub_components:
+          - id: application-monitoring
+            name: "System Health Monitoring"
+            active: false
+            premium: false
+            uvp: "Platform health and performance metrics are tracked continuously so that operations team can detect issues proactively, which helps us maintain high availability and reliability."
+            context: "Technical: Prometheus metrics collection with Grafana dashboards for system health, API latency, error rates, and resource utilization. Alerts configured for SLA violations."
+          - id: log-aggregation
+            name: "Centralized Logging"
+            active: false
+            premium: false
+            uvp: "Application and infrastructure logs are aggregated centrally so that engineers can troubleshoot issues efficiently, which helps us reduce mean time to resolution (MTTR)."
+            context: "Technical: ELK stack (Elasticsearch, Logstash, Kibana) or Loki for log aggregation, indexing, and search. Structured logging with correlation IDs for request tracing."
+          - id: incident-response
+            name: "Incident Management"
+            active: false
+            premium: false
+            uvp: "Critical system issues trigger automated alerts and escalation workflows so that on-call engineers respond immediately, which helps us minimize user impact during incidents."
+            context: "Technical: PagerDuty integration for alerting, escalation policies, and incident tracking. Runbooks for common failure scenarios stored in internal wiki."
+      # Component: Deployment Infrastructure
+      - id: infra-deployment
+        name: "Continuous Delivery and Infrastructure"
+        description: |
+          Deployment infrastructure automates the build, test, and release process while providing
+          zero-downtime deployment capabilities. This component enables rapid, safe evolution of
+          the platform without service disruptions.
+        context: "Technical: Docker containers orchestrated by Kubernetes, CI/CD pipeline via GitHub Actions or GitLab CI, blue-green deployment pattern for zero-downtime releases."
+        sub_components:
+          - id: container-orchestration
+            name: "Scalable Service Runtime"
+            active: false
+            premium: false
+            uvp: "Application services scale automatically based on demand so that performance remains consistent during traffic spikes, which helps us maintain reliable user experiences."
+            context: "Technical: Kubernetes cluster with horizontal pod autoscaling based on CPU/memory metrics, load balancing via ingress controller, and pod disruption budgets for availability."
+          - id: cicd-pipeline
+            name: "Automated Deployment Pipeline"
+            active: false
+            premium: false
+            uvp: "Code changes are tested and deployed automatically through standardized workflows so that features ship faster with fewer errors, which helps us accelerate innovation."
+            context: "Technical: GitHub Actions or GitLab CI pipeline with automated testing, Docker image builds, security scanning, and progressive deployment to staging/production."
+          - id: zero-downtime-deployments
+            name: "Safe Platform Updates"
+            active: false
+            premium: false
+            uvp: "Platform updates are deployed without service interruptions so that users experience continuous availability, which helps us maintain SLA commitments."
+            context: "Technical: Blue-green deployment pattern with health checks and automatic rollback. New version runs in parallel, traffic switches after validation, instant rollback if issues detected."
