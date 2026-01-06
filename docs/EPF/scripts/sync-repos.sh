@@ -117,39 +117,56 @@ get_remote_version() {
 }
 
 validate_version_consistency() {
-    log_info "Validating version consistency..."
+    log_info "Validating version consistency across all framework files..."
     
-    local file="$EPF_PREFIX/integration_specification.yaml"
-    
-    if [[ ! -f "$file" ]]; then
-        log_error "File not found: $file"
-        return 1
-    fi
-    
-    local comment_version=$(grep "^# Version:" "$file" | sed 's/.*Version: \([0-9.]*\).*/\1/')
-    local spec_version=$(grep "^  version:" "$file" | head -1 | sed 's/.*"\(.*\)".*/\1/')
-    local changelog_version=$(grep -A2 "^  changelog:" "$file" | grep "version:" | head -1 | sed 's/.*"\(.*\)".*/\1/')
-    
-    local errors=0
-    
-    if [[ "$comment_version" != "$spec_version" ]]; then
-        log_error "Version mismatch: header comment ($comment_version) != spec.version ($spec_version)"
-        ((errors++))
-    fi
-    
-    if [[ "$spec_version" != "$changelog_version" ]]; then
-        log_error "Version mismatch: spec.version ($spec_version) != latest changelog ($changelog_version)"
-        ((errors++))
-    fi
-    
-    if [[ $errors -eq 0 ]]; then
-        log_info "All versions consistent: $spec_version ✓"
+    # Use the comprehensive health check for version validation
+    if [[ -f "$EPF_PREFIX/scripts/epf-health-check.sh" ]]; then
+        cd "$EPF_PREFIX"
+        
+        # Run health check in silent mode, capture output
+        local health_output=$(./scripts/epf-health-check.sh 2>&1)
+        local health_exit=$?
+        
+        cd - > /dev/null
+        
+        # If health check failed, display relevant output
+        if [[ $health_exit -ne 0 ]]; then
+            echo ""
+            log_error "EPF health check failed - version inconsistency detected!"
+            echo "$health_output" | grep -E "(CRITICAL|ERROR|Version)" || echo "$health_output"
+            echo ""
+            log_error "Cannot push to canonical EPF with version inconsistencies!"
+            log_warn "RECOMMENDED FIXES:"
+            log_info "  Auto-fix: ./docs/EPF/scripts/epf-health-check.sh --fix"
+            log_info "  Or manual: ./docs/EPF/scripts/bump-framework-version.sh \"X.Y.Z\" \"Description\""
+            echo ""
+            return 1
+        fi
+        
+        log_info "All versions consistent and framework health verified ✓"
         return 0
     else
-        log_error "Fix version inconsistencies before syncing!"
-        log_warn "RECOMMENDED: Use ./scripts/classify-changes.sh to check if version bump needed"
-        log_info "Then: ./scripts/bump-framework-version.sh \"X.Y.Z\" \"Description\""
-        return 1
+        # Fallback to basic integration_specification.yaml check
+        log_warn "epf-health-check.sh not found - using basic version check"
+        
+        local file="$EPF_PREFIX/integration_specification.yaml"
+        
+        if [[ ! -f "$file" ]]; then
+            log_error "File not found: $file"
+            return 1
+        fi
+        
+        local comment_version=$(grep "^# Version:" "$file" | sed 's/.*Version: \([0-9.]*\).*/\1/')
+        local spec_version=$(grep "^  version:" "$file" | head -1 | sed 's/.*"\(.*\)".*/\1/')
+        
+        if [[ "$comment_version" != "$spec_version" ]]; then
+            log_error "Version mismatch in integration_specification.yaml"
+            log_error "  Header: $comment_version vs Spec: $spec_version"
+            return 1
+        fi
+        
+        log_info "integration_specification.yaml version consistent: $spec_version ✓"
+        return 0
     fi
 }
 
