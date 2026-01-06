@@ -158,6 +158,10 @@ echo ""
 echo "  Copying READY phase templates..."
 cp docs/EPF/templates/READY/*.yaml docs/EPF/_instances/"$PRODUCT_NAME"/READY/
 
+# Copy FIRE phase value model templates
+echo "  Copying FIRE phase value model templates..."
+cp docs/EPF/templates/FIRE/value_models/*.yaml docs/EPF/_instances/"$PRODUCT_NAME"/FIRE/value_models/
+
 # Set up .gitignore to track only this product's instance
 echo ""
 echo "  Configuring .gitignore..."
